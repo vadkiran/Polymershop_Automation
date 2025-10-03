@@ -4,6 +4,60 @@
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
+  <test thread-count="2" parallel="tests" name="Firefox Tests(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="test.CartTests">
+        <methods>
+          <include name="testUpdateProductQuantity"/>
+          <include name="testEmptyCartMessage"/>
+          <include name="setup"/>
+          <include name="testAddingProductsToCart"/>
+          <include name="testCartTotalCalculation"/>
+          <include name="testRemovingProductsFromCart"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- test.CartTests -->
+      <class name="test.CheckoutTests">
+        <methods>
+          <include name="testOrderConfirmation"/>
+          <include name="testPaymentMethodSelection"/>
+          <include name="testShippingFormValidation"/>
+          <include name="tearDown"/>
+          <include name="testCheckoutButtonFunctionality"/>
+          <include name="testOrderSummaryInCheckout"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- test.CheckoutTests -->
+      <class name="test.HomePageTests">
+        <methods>
+          <include name="testFeaturedProductsDisplay"/>
+          <include name="testProductCategoriesDisplay"/>
+          <include name="testNavigationMenuPresence"/>
+          <include name="setup"/>
+          <include name="testSearchFunctionality"/>
+          <include name="tearDown"/>
+          <include name="testHomePageLoads"/>
+        </methods>
+      </class> <!-- test.HomePageTests -->
+      <class name="test.ProductTests">
+        <methods>
+          <include name="testProductImageGallery"/>
+          <include name="tearDown"/>
+          <include name="testProductSearchResults"/>
+          <include name="testProductDetailPageElements"/>
+          <include name="testProductGridDisplay"/>
+          <include name="testProductPagination"/>
+          <include name="setup"/>
+          <include name="testQuantitySelection"/>
+          <include name="testAddProductToCartFromDetailsPage"/>
+          <include name="testProductSortingOptions"/>
+          <include name="testProductDescriptionAndSpecs"/>
+          <include name="testProductFilteringByCategory"/>
+        </methods>
+      </class> <!-- test.ProductTests -->
+    </classes>
+  </test> <!-- Firefox Tests(failed) -->
   <test thread-count="2" parallel="tests" name="Chrome Tests(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
@@ -31,9 +85,9 @@
       </class> <!-- test.CheckoutTests -->
       <class name="test.HomePageTests">
         <methods>
-          <include name="testFeaturedProductsDisplay"/>
           <include name="testProductCategoriesDisplay"/>
           <include name="testNavigationMenuPresence"/>
+          <include name="testFeaturedProductsDisplay"/>
           <include name="setup"/>
           <include name="testSearchFunctionality"/>
           <include name="tearDown"/>
@@ -42,64 +96,20 @@
       </class> <!-- test.HomePageTests -->
       <class name="test.ProductTests">
         <methods>
-          <include name="testProductImageGallery"/>
           <include name="tearDown"/>
+          <include name="testProductImageGallery"/>
           <include name="testProductDetailPageElements"/>
-          <include name="testProductFiltering"/>
+          <include name="testProductSearchResults"/>
           <include name="testProductGridDisplay"/>
           <include name="setup"/>
+          <include name="testProductPagination"/>
+          <include name="testQuantitySelection"/>
           <include name="testAddProductToCartFromDetailsPage"/>
+          <include name="testProductSortingOptions"/>
+          <include name="testProductDescriptionAndSpecs"/>
+          <include name="testProductFilteringByCategory"/>
         </methods>
       </class> <!-- test.ProductTests -->
     </classes>
   </test> <!-- Chrome Tests(failed) -->
-  <test thread-count="2" parallel="tests" name="Firefox Tests(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="test.CartTests">
-        <methods>
-          <include name="testUpdateProductQuantity"/>
-          <include name="testEmptyCartMessage"/>
-          <include name="setup"/>
-          <include name="testAddingProductsToCart"/>
-          <include name="testRemovingProductsFromCart"/>
-          <include name="testCartTotalCalculation"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- test.CartTests -->
-      <class name="test.CheckoutTests">
-        <methods>
-          <include name="testOrderConfirmation"/>
-          <include name="testPaymentMethodSelection"/>
-          <include name="testShippingFormValidation"/>
-          <include name="tearDown"/>
-          <include name="testCheckoutButtonFunctionality"/>
-          <include name="testOrderSummaryInCheckout"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- test.CheckoutTests -->
-      <class name="test.HomePageTests">
-        <methods>
-          <include name="testProductCategoriesDisplay"/>
-          <include name="testNavigationMenuPresence"/>
-          <include name="testFeaturedProductsDisplay"/>
-          <include name="setup"/>
-          <include name="testSearchFunctionality"/>
-          <include name="tearDown"/>
-          <include name="testHomePageLoads"/>
-        </methods>
-      </class> <!-- test.HomePageTests -->
-      <class name="test.ProductTests">
-        <methods>
-          <include name="tearDown"/>
-          <include name="testProductImageGallery"/>
-          <include name="testProductDetailPageElements"/>
-          <include name="testProductFiltering"/>
-          <include name="testProductGridDisplay"/>
-          <include name="setup"/>
-          <include name="testAddProductToCartFromDetailsPage"/>
-        </methods>
-      </class> <!-- test.ProductTests -->
-    </classes>
-  </test> <!-- Firefox Tests(failed) -->
 </suite> <!-- Failed suite [Polymer Shop Test Suite] -->

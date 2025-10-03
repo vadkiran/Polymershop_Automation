@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Firefox Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/20</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/25</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Oct 02 12:27:47 IST 2025</td>
+<td>Started on:</td><td>Fri Oct 03 16:39:37 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (353 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (268 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,22 +76,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.HomePageTests.setup()'><b>setup</b><br>Test class: test.HomePageTests</td>
+<td title='test.CartTests.setup()'><b>setup</b><br>Test class: test.CartTests</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.CartTests.setup(CartTests.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	... 28 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1844825091", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1844825091'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1916258422", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1916258422'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CartTests.setup(CartTests.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -118,31 +120,33 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	... 28 more
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
 </pre></div></td>
 <td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
+<td>test.CartTests@69453e37</td></tr>
 <tr>
 <td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
+	at test.ProductTests.setup(ProductTests.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace20339534", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace20339534'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1131630448", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1131630448'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
+	at test.ProductTests.setup(ProductTests.java:28)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -169,33 +173,82 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
 </pre></div></td>
 <td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.HomePageTests.setup()'><b>setup</b><br>Test class: test.HomePageTests</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	... 28 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1087433480", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1087433480'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	... 28 more
+</pre></div></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
 <tr>
 <td title='test.CheckoutTests.setup()'><b>setup</b><br>Test class: test.CheckoutTests</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace259776882", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace259776882'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1030404147", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1030404147'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -222,67 +275,14 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
 </pre></div></td>
 <td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
-<tr>
-<td title='test.CartTests.setup()'><b>setup</b><br>Test class: test.CartTests</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace520821472", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace520821472'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-</pre></div></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -293,185 +293,235 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.CheckoutTests.tearDown()'><b>tearDown</b><br>Test class: test.CheckoutTests</td>
+<td title='test.ProductTests.tearDown()'><b>tearDown</b><br>Test class: test.ProductTests</td>
 <td></td>
 <td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
+<td>test.ProductTests@2002fc1d</td></tr>
 <tr>
 <td title='test.ProductTests.tearDown()'><b>tearDown</b><br>Test class: test.ProductTests</td>
 <td></td>
 <td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
-<tr>
-<td title='test.HomePageTests.tearDown()'><b>tearDown</b><br>Test class: test.HomePageTests</td>
-<td></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
-<tr>
-<td title='test.HomePageTests.tearDown()'><b>tearDown</b><br>Test class: test.HomePageTests</td>
-<td></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
-<tr>
-<td title='test.HomePageTests.setup()'><b>setup</b><br>Test class: test.HomePageTests</td>
-<td></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
-<tr>
-<td title='test.HomePageTests.tearDown()'><b>tearDown</b><br>Test class: test.HomePageTests</td>
-<td></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
-<tr>
-<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
-<td></td>
-<td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
-<tr>
-<td title='test.CheckoutTests.setup()'><b>setup</b><br>Test class: test.CheckoutTests</td>
-<td></td>
-<td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
-<tr>
-<td title='test.CheckoutTests.setup()'><b>setup</b><br>Test class: test.CheckoutTests</td>
-<td></td>
-<td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
-<tr>
-<td title='test.CheckoutTests.tearDown()'><b>tearDown</b><br>Test class: test.CheckoutTests</td>
-<td></td>
-<td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
-<tr>
-<td title='test.CartTests.tearDown()'><b>tearDown</b><br>Test class: test.CartTests</td>
-<td></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.HomePageTests.setup()'><b>setup</b><br>Test class: test.HomePageTests</td>
-<td></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
-<tr>
-<td title='test.CheckoutTests.tearDown()'><b>tearDown</b><br>Test class: test.CheckoutTests</td>
-<td></td>
-<td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
-<tr>
-<td title='test.CheckoutTests.setup()'><b>setup</b><br>Test class: test.CheckoutTests</td>
-<td></td>
-<td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
+<td>test.ProductTests@2002fc1d</td></tr>
 <tr>
 <td title='test.CartTests.setup()'><b>setup</b><br>Test class: test.CartTests</td>
 <td></td>
 <td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
-<td></td>
-<td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
-<tr>
-<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
-<td></td>
-<td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
-<tr>
-<td title='test.CartTests.tearDown()'><b>tearDown</b><br>Test class: test.CartTests</td>
-<td></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.CartTests.setup()'><b>setup</b><br>Test class: test.CartTests</td>
-<td></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.HomePageTests.tearDown()'><b>tearDown</b><br>Test class: test.HomePageTests</td>
-<td></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
-<tr>
-<td title='test.CartTests.setup()'><b>setup</b><br>Test class: test.CartTests</td>
-<td></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.HomePageTests.setup()'><b>setup</b><br>Test class: test.HomePageTests</td>
-<td></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
+<td>test.CartTests@69453e37</td></tr>
 <tr>
 <td title='test.CheckoutTests.tearDown()'><b>tearDown</b><br>Test class: test.CheckoutTests</td>
 <td></td>
 <td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
-<tr>
-<td title='test.CartTests.tearDown()'><b>tearDown</b><br>Test class: test.CartTests</td>
-<td></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.CartTests.tearDown()'><b>tearDown</b><br>Test class: test.CartTests</td>
-<td></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.CartTests.tearDown()'><b>tearDown</b><br>Test class: test.CartTests</td>
-<td></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.CartTests.setup()'><b>setup</b><br>Test class: test.CartTests</td>
-<td></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
-<td></td>
-<td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
-<tr>
-<td title='test.HomePageTests.tearDown()'><b>tearDown</b><br>Test class: test.HomePageTests</td>
-<td></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
-<tr>
-<td title='test.HomePageTests.setup()'><b>setup</b><br>Test class: test.HomePageTests</td>
-<td></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
 <tr>
 <td title='test.CheckoutTests.tearDown()'><b>tearDown</b><br>Test class: test.CheckoutTests</td>
 <td></td>
 <td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.HomePageTests.setup()'><b>setup</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
+<tr>
+<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.HomePageTests.tearDown()'><b>tearDown</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
+<tr>
+<td title='test.CheckoutTests.tearDown()'><b>tearDown</b><br>Test class: test.CheckoutTests</td>
+<td></td>
+<td>0</td>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.CartTests.setup()'><b>setup</b><br>Test class: test.CartTests</td>
+<td></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.ProductTests.tearDown()'><b>tearDown</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.ProductTests.tearDown()'><b>tearDown</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.ProductTests.tearDown()'><b>tearDown</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.CartTests.tearDown()'><b>tearDown</b><br>Test class: test.CartTests</td>
+<td></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.ProductTests.tearDown()'><b>tearDown</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.HomePageTests.tearDown()'><b>tearDown</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
+<tr>
+<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
 <tr>
 <td title='test.CheckoutTests.setup()'><b>setup</b><br>Test class: test.CheckoutTests</td>
 <td></td>
 <td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.CartTests.tearDown()'><b>tearDown</b><br>Test class: test.CartTests</td>
+<td></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.CartTests.tearDown()'><b>tearDown</b><br>Test class: test.CartTests</td>
+<td></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.HomePageTests.tearDown()'><b>tearDown</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
 <tr>
 <td title='test.ProductTests.tearDown()'><b>tearDown</b><br>Test class: test.ProductTests</td>
 <td></td>
 <td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.HomePageTests.setup()'><b>setup</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
 <tr>
 <td title='test.ProductTests.tearDown()'><b>tearDown</b><br>Test class: test.ProductTests</td>
 <td></td>
 <td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.CheckoutTests.setup()'><b>setup</b><br>Test class: test.CheckoutTests</td>
+<td></td>
+<td>0</td>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.CheckoutTests.tearDown()'><b>tearDown</b><br>Test class: test.CheckoutTests</td>
+<td></td>
+<td>0</td>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.CartTests.setup()'><b>setup</b><br>Test class: test.CartTests</td>
+<td></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.CheckoutTests.tearDown()'><b>tearDown</b><br>Test class: test.CheckoutTests</td>
+<td></td>
+<td>0</td>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.CartTests.tearDown()'><b>tearDown</b><br>Test class: test.CartTests</td>
+<td></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.HomePageTests.setup()'><b>setup</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
+<tr>
+<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.CartTests.tearDown()'><b>tearDown</b><br>Test class: test.CartTests</td>
+<td></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.CheckoutTests.setup()'><b>setup</b><br>Test class: test.CheckoutTests</td>
+<td></td>
+<td>0</td>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.HomePageTests.tearDown()'><b>tearDown</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
+<tr>
+<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
 <tr>
 <td title='test.ProductTests.tearDown()'><b>tearDown</b><br>Test class: test.ProductTests</td>
 <td></td>
 <td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.HomePageTests.setup()'><b>setup</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
 <tr>
 <td title='test.ProductTests.tearDown()'><b>tearDown</b><br>Test class: test.ProductTests</td>
 <td></td>
 <td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.HomePageTests.tearDown()'><b>tearDown</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
+<tr>
+<td title='test.CheckoutTests.setup()'><b>setup</b><br>Test class: test.CheckoutTests</td>
+<td></td>
+<td>0</td>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.CartTests.setup()'><b>setup</b><br>Test class: test.CartTests</td>
+<td></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.ProductTests.setup()'><b>setup</b><br>Test class: test.ProductTests</td>
+<td></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -482,24 +532,24 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.CartTests.testEmptyCartMessage()'><b>testEmptyCartMessage</b><br>Test class: test.CartTests<br>Test method: Verify empty cart message</td>
+<td title='test.ProductTests.testProductImageGallery()'><b>testProductImageGallery</b><br>Test class: test.ProductTests<br>Test method: Verify product image gallery</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace95145483", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace95145483'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1382773166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1382773166'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -526,390 +576,31 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
 </pre></div></td>
 <td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.CheckoutTests.testShippingFormValidation()'><b>testShippingFormValidation</b><br>Test class: test.CheckoutTests<br>Test method: Verify shipping form validation</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace591458753", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace591458753'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-</pre></div></td>
-<td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
-<tr>
-<td title='test.ProductTests.testProductDetailPageElements()'><b>testProductDetailPageElements</b><br>Test class: test.ProductTests<br>Test method: Verify product details page elements</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace935499168", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace935499168'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-</pre></div></td>
-<td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
-<tr>
-<td title='test.CartTests.testAddingProductsToCart()'><b>testAddingProductsToCart</b><br>Test class: test.CartTests<br>Test method: Verify adding products to cart</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace761263960", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace761263960'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-</pre></div></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.CartTests.testRemovingProductsFromCart()'><b>testRemovingProductsFromCart</b><br>Test class: test.CartTests<br>Test method: Verify removing products from cart</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1044249978", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1044249978'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-</pre></div></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.HomePageTests.testSearchFunctionality()'><b>testSearchFunctionality</b><br>Test class: test.HomePageTests<br>Test method: Verify search functionality</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	... 28 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace332708285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace332708285'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	... 28 more
-</pre></div></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
-<tr>
-<td title='test.HomePageTests.testNavigationMenuPresence()'><b>testNavigationMenuPresence</b><br>Test class: test.HomePageTests<br>Test method: Verify navigation menu items</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	... 28 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1891209811", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1891209811'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	... 28 more
-</pre></div></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
-<tr>
-<td title='test.HomePageTests.testFeaturedProductsDisplay()'><b>testFeaturedProductsDisplay</b><br>Test class: test.HomePageTests<br>Test method: Verify featured products section</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	... 28 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1871251717", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1871251717'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	... 28 more
-</pre></div></td>
-<td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
+<td>test.ProductTests@2002fc1d</td></tr>
 <tr>
 <td title='test.HomePageTests.testProductCategoriesDisplay()'><b>testProductCategoriesDisplay</b><br>Test class: test.HomePageTests<br>Test method: Verify product categories display</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	... 28 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2041356640", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2041356640'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace10513704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace10513704'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -936,31 +627,29 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	... 28 more
 </pre></div></td>
 <td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
+<td>test.HomePageTests@6200f9cb</td></tr>
 <tr>
-<td title='test.CheckoutTests.testCheckoutButtonFunctionality()'><b>testCheckoutButtonFunctionality</b><br>Test class: test.CheckoutTests<br>Test method: Verify checkout button functionality</td>
+<td title='test.HomePageTests.testSearchFunctionality()'><b>testSearchFunctionality</b><br>Test class: test.HomePageTests<br>Test method: Verify search functionality</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	... 28 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace661144935", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace661144935'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1634063528", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1634063528'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -987,298 +676,31 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
+	... 28 more
 </pre></div></td>
 <td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
-<tr>
-<td title='test.CheckoutTests.testOrderConfirmation()'><b>testOrderConfirmation</b><br>Test class: test.CheckoutTests<br>Test method: Verify order confirmation</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace202439486", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace202439486'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-</pre></div></td>
-<td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
-<tr>
-<td title='test.CartTests.testUpdateProductQuantity()'><b>testUpdateProductQuantity</b><br>Test class: test.CartTests<br>Test method: Verify updating product quantity in cart</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace763775113", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace763775113'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-</pre></div></td>
-<td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
-<tr>
-<td title='test.ProductTests.testAddProductToCartFromDetailsPage()'><b>testAddProductToCartFromDetailsPage</b><br>Test class: test.ProductTests<br>Test method: Verify add to cart functionality from details page</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1173098492", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1173098492'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-</pre></div></td>
-<td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
-<tr>
-<td title='test.ProductTests.testProductGridDisplay()'><b>testProductGridDisplay</b><br>Test class: test.ProductTests<br>Test method: Verify product grid display</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace106492136", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace106492136'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-</pre></div></td>
-<td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
-<tr>
-<td title='test.ProductTests.testProductFiltering()'><b>testProductFiltering</b><br>Test class: test.ProductTests<br>Test method: Verify product filtering by category</td>
-<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1604778196", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1604778196'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
-	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
-	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
-	... 26 more
-</pre></div></td>
-<td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
+<td>test.HomePageTests@6200f9cb</td></tr>
 <tr>
 <td title='test.CartTests.testCartTotalCalculation()'><b>testCartTotalCalculation</b><br>Test class: test.CartTests<br>Test method: Verify cart total calculation</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
+	at test.CartTests.setup(CartTests.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1309819616", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1309819616'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace626862162", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace626862162'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CartTests.setup(CartTests.java:24)
+	at test.CartTests.setup(CartTests.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1305,33 +727,33 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
 </pre></div></td>
 <td>0</td>
-<td>test.CartTests@37ceb1df</td></tr>
+<td>test.CartTests@69453e37</td></tr>
 <tr>
-<td title='test.CheckoutTests.testOrderSummaryInCheckout()'><b>testOrderSummaryInCheckout</b><br>Test class: test.CheckoutTests<br>Test method: Verify order summary in checkout</td>
+<td title='test.CartTests.testRemovingProductsFromCart()'><b>testRemovingProductsFromCart</b><br>Test class: test.CartTests<br>Test method: Verify removing products from cart</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
+	at test.CartTests.setup(CartTests.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace328881513", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace328881513'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace640186873", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace640186873'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
+	at test.CartTests.setup(CartTests.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1358,33 +780,33 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
 </pre></div></td>
 <td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
+<td>test.CartTests@69453e37</td></tr>
 <tr>
-<td title='test.ProductTests.testProductImageGallery()'><b>testProductImageGallery</b><br>Test class: test.ProductTests<br>Test method: Verify product image gallery</td>
+<td title='test.CheckoutTests.testOrderConfirmation()'><b>testOrderConfirmation</b><br>Test class: test.CheckoutTests<br>Test method: Verify order confirmation</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace45411169", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace45411169'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace627475440", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace627475440'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.ProductTests.setup(ProductTests.java:23)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1411,33 +833,33 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
 </pre></div></td>
 <td>0</td>
-<td>test.ProductTests@70325e14</td></tr>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
 <tr>
-<td title='test.CheckoutTests.testPaymentMethodSelection()'><b>testPaymentMethodSelection</b><br>Test class: test.CheckoutTests<br>Test method: Verify payment method selection</td>
+<td title='test.CheckoutTests.testCheckoutButtonFunctionality()'><b>testCheckoutButtonFunctionality</b><br>Test class: test.CheckoutTests<br>Test method: Verify checkout button functionality</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1925497395", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1925497395'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1248994149", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1248994149'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.CheckoutTests.setup(CheckoutTests.java:24)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1464,31 +886,610 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	... 26 more
 </pre></div></td>
 <td>0</td>
-<td>test.CheckoutTests@7c9d8e2</td></tr>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.ProductTests.testProductDescriptionAndSpecs()'><b>testProductDescriptionAndSpecs</b><br>Test class: test.ProductTests<br>Test method: Verify product description and specs (Size selector)</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace882354702", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace882354702'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.HomePageTests.testFeaturedProductsDisplay()'><b>testFeaturedProductsDisplay</b><br>Test class: test.HomePageTests<br>Test method: Verify featured products section</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	... 28 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace534311608", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace534311608'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	... 28 more
+</pre></div></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
+<tr>
+<td title='test.CartTests.testEmptyCartMessage()'><b>testEmptyCartMessage</b><br>Test class: test.CartTests<br>Test method: Verify empty cart message</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CartTests.setup(CartTests.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2141091199", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2141091199'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CartTests.setup(CartTests.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.ProductTests.testProductSearchResults()'><b>testProductSearchResults</b><br>Test class: test.ProductTests<br>Test method: Verify product search results (simulated via URL)</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1848724373", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1848724373'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.CartTests.testAddingProductsToCart()'><b>testAddingProductsToCart</b><br>Test class: test.CartTests<br>Test method: Verify adding products to cart</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CartTests.setup(CartTests.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1989411121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1989411121'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CartTests.setup(CartTests.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.CheckoutTests.testShippingFormValidation()'><b>testShippingFormValidation</b><br>Test class: test.CheckoutTests<br>Test method: Verify shipping form validation</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1202106570", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1202106570'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.ProductTests.testProductPagination()'><b>testProductPagination</b><br>Test class: test.ProductTests<br>Test method: Verify product pagination</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1540964980", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1540964980'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.ProductTests.testProductDetailPageElements()'><b>testProductDetailPageElements</b><br>Test class: test.ProductTests<br>Test method: Verify product details page elements (Title, Price, Add to Cart)</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace622070074", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace622070074'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.ProductTests.testProductGridDisplay()'><b>testProductGridDisplay</b><br>Test class: test.ProductTests<br>Test method: Verify product grid display</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2114362345", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2114362345'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.ProductTests.testQuantitySelection()'><b>testQuantitySelection</b><br>Test class: test.ProductTests<br>Test method: Verify quantity selection</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1847675088", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1847675088'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.ProductTests.testProductFilteringByCategory()'><b>testProductFilteringByCategory</b><br>Test class: test.ProductTests<br>Test method: Verify product filtering by category</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2012271809", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2012271809'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
 <tr>
 <td title='test.HomePageTests.testHomePageLoads()'><b>testHomePageLoads</b><br>Test class: test.HomePageTests<br>Test method: Verify homepage loads correctly</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	... 28 more
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace343729860", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace343729860'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1983123141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1983123141'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
 	at managers.DriverManager.getDriver(DriverManager.java:24)
-	at test.HomePageTests.setup(HomePageTests.java:20)
+	at test.HomePageTests.setup(HomePageTests.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1515,12 +1516,326 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeExc
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/config.properties [in thread &quot;TestNG-tests-1&quot;]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
 	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
 	... 28 more
 </pre></div></td>
 <td>0</td>
-<td>test.HomePageTests@23348b5d</td></tr>
+<td>test.HomePageTests@6200f9cb</td></tr>
+<tr>
+<td title='test.ProductTests.testAddProductToCartFromDetailsPage()'><b>testAddProductToCartFromDetailsPage</b><br>Test class: test.ProductTests<br>Test method: Verify add to cart functionality from details page</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace392834716", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace392834716'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.HomePageTests.testNavigationMenuPresence()'><b>testNavigationMenuPresence</b><br>Test class: test.HomePageTests<br>Test method: Verify navigation menu items</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	... 28 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace719448535", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace719448535'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	... 28 more
+</pre></div></td>
+<td>0</td>
+<td>test.HomePageTests@6200f9cb</td></tr>
+<tr>
+<td title='test.CartTests.testUpdateProductQuantity()'><b>testUpdateProductQuantity</b><br>Test class: test.CartTests<br>Test method: Verify updating product quantity in cart</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CartTests.setup(CartTests.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1600285275", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1600285275'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CartTests.setup(CartTests.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.CartTests@69453e37</td></tr>
+<tr>
+<td title='test.CheckoutTests.testOrderSummaryInCheckout()'><b>testOrderSummaryInCheckout</b><br>Test class: test.CheckoutTests<br>Test method: Verify order summary in checkout</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace171372751", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace171372751'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
+<tr>
+<td title='test.ProductTests.testProductSortingOptions()'><b>testProductSortingOptions</b><br>Test class: test.ProductTests<br>Test method: Verify product sorting options (Test skipped)</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1323275106", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1323275106'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.ProductTests.setup(ProductTests.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.ProductTests@2002fc1d</td></tr>
+<tr>
+<td title='test.CheckoutTests.testPaymentMethodSelection()'><b>testPaymentMethodSelection</b><br>Test class: test.CheckoutTests<br>Test method: Verify payment method selection (by checking section presence)</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace61838162", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace61838162'><pre>java.lang.NoClassDefFoundError: Could not initialize class utils.ConfigReader
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.CheckoutTests.setup(CheckoutTests.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.RuntimeException: config.properties file not found at resources/Config.properties [in thread &quot;TestNG-tests-1&quot;]
+	at utils.ConfigReader.&lt;clinit&gt;(ConfigReader.java:19)
+	at managers.DriverManager.getDriver(DriverManager.java:24)
+	at test.HomePageTests.setup(HomePageTests.java:23)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>test.CheckoutTests@6f4a47c7</td></tr>
 </table><p>
 </body>
 </html>

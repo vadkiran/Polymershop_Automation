@@ -23,4 +23,9 @@ public abstract class BasePage {
     protected void type(WebElement element, String text) {
         wait.until(ExpectedConditions.visibilityOf(element)).sendKeys(text);
     }
+    protected String getText(WebElement element) {
+        // Wait until the element is visible before trying to get its text
+        wait.until(ExpectedConditions.visibilityOf(element));
+        return element.getText();
+    }
 }
