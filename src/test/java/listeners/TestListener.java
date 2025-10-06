@@ -4,72 +4,79 @@ import managers.DriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
+/**
+ * TestListener - TestNG Listener for test execution events
+ */
 public class TestListener implements ITestListener {
-
-    private String getTestName(ITestResult result) {
-        return result.getTestClass().getRealClass().getSimpleName() + "." + result.getName();
-    }
-
-    private void takeScreenshot(String testName) {
-        WebDriver driver = DriverManager.getDriver();
-        if (driver instanceof TakesScreenshot) {
-            File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            try {
-                String timestamp = new Date().toString().replace(" ", "_").replace(":", "-");
-                Path destination = Paths.get("output", "screenshots", testName + "_" + timestamp + ".png");
-                Files.createDirectories(destination.getParent());
-                Files.copy(screenshotFile.toPath(), destination);
-                System.out.println("Screenshot saved to " + destination.toAbsolutePath());
-            } catch (IOException e) {
-                System.err.println("Failed to save screenshot: " + e.getMessage());
-            }
-        }
-    }
-
+    
     @Override
     public void onTestStart(ITestResult result) {
-        System.out.println("Starting test: " + getTestName(result));
+        System.out.println("Starting: " + result.getMethod().getMethodName());
     }
-
+    
     @Override
     public void onTestSuccess(ITestResult result) {
-        System.out.println("Test passed: " + getTestName(result));
+        System.out.println("✅ PASSED: " + result.getMethod().getMethodName());
     }
-
+    
     @Override
     public void onTestFailure(ITestResult result) {
-        System.out.println("Test failed: " + getTestName(result));
-        takeScreenshot(getTestName(result));
+        System.out.println("❌ FAILED: " + result.getMethod().getMethodName());
+        takeScreenshot(result.getMethod().getMethodName());
     }
-
+    
     @Override
     public void onTestSkipped(ITestResult result) {
-        System.out.println("Test skipped: " + getTestName(result));
+        System.out.println("⚠️  SKIPPED: " + result.getMethod().getMethodName());
     }
-
-    @Override
-    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-        // Not used for this framework
-    }
-
+    
     @Override
     public void onStart(ITestContext context) {
-        System.out.println("Starting TestNG execution for suite: " + context.getSuite().getName());
+        System.out.println("\n" + "=".repeat(70));
+        System.out.println("Starting Test Suite: " + context.getName());
+        System.out.println("=".repeat(70));
     }
-
+    
     @Override
     public void onFinish(ITestContext context) {
-        System.out.println("Finished TestNG execution for suite: " + context.getSuite().getName());
+        System.out.println("\n" + "=".repeat(70));
+        System.out.println("Test Suite Finished: " + context.getName());
+        System.out.println("Passed: " + context.getPassedTests().size());
+        System.out.println("Failed: " + context.getFailedTests().size());
+        System.out.println("Skipped: " + context.getSkippedTests().size());
+        System.out.println("=".repeat(70) + "\n");
+    }
+    
+    /**
+     * Take screenshot on failure
+     */
+    private void takeScreenshot(String testName) {
+        try {
+            WebDriver driver = DriverManager.getDriver();
+            if (driver != null) {
+                TakesScreenshot ts = (TakesScreenshot) driver;
+                File source = ts.getScreenshotAs(OutputType.FILE);
+                
+                String timestamp = LocalDateTime.now().format(
+                    DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+                String fileName = testName + "_" + timestamp + ".png";
+                
+                File destination = new File("output/screenshots/" + fileName);
+                destination.getParentFile().mkdirs();
+                FileHandler.copy(source, destination);
+                
+                System.out.println("Screenshot saved: " + fileName);
+            }
+        } catch (Exception e) {
+            System.out.println("Failed to capture screenshot: " + e.getMessage());
+        }
     }
 }

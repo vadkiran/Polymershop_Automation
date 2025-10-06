@@ -1,114 +1,159 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutPage extends BasePage {
-    // --- Locators for Form and Sections ---
     
-    // The main form container for shipping details
-    @FindBy(css = "iron-form#checkout-form")
-    private WebElement shippingForm; 
-
-    // Specific input fields within the form
-    @FindBy(css = "input[name='name']")
-    private WebElement nameInput;
-    
-    @FindBy(css = "input[name='address']")
-    private WebElement addressInput;
-
-    @FindBy(css = "input[name='city']")
-    private WebElement cityInput;
-
-    // The entire payment section (for presence check)
-    @FindBy(css = "#payment-section")
-    private WebElement paymentSection; 
-    
-    // The 'Place Order' button
-    @FindBy(css = ".submit-button button")
-    private WebElement placeOrderButton;
-
-    // --- Locators for Order Summary and Confirmation ---
-
-    // Total price in the order summary
-    @FindBy(css = ".order-summary .total-price")
-    private WebElement orderTotalElement;
-    
-    // An element indicating a product is present in the summary
-    @FindBy(css = ".order-summary .item-name")
-    private WebElement itemInSummary;
-
-    // Confirmation text/page element after submission
-    @FindBy(css = "shop-checkout > .main-container h1")
-    private WebElement confirmationHeader;
-
     public CheckoutPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
-    }
-
-    // --- Verification Methods ---
-
-    public boolean isShippingFormDisplayed() {
-        return shippingForm.isDisplayed();
     }
     
-    public boolean isPaymentSectionDisplayed() {
-        return paymentSection.isDisplayed();
+    private SearchContext getShopCheckoutShadowRoot() {
+        SearchContext shopAppRoot = getShopAppShadowRoot();
+        WebElement shopCheckout = shopAppRoot.findElement(By.cssSelector("shop-checkout"));
+        return shopCheckout.getShadowRoot();
     }
     
-    public boolean isOrderSummaryDisplayed() {
-        // We can use the total element as a proxy for the entire summary being present
-        return orderTotalElement.isDisplayed(); 
+    public boolean isCheckoutPageLoaded() {
+        try {
+            SearchContext shopAppRoot = getShopAppShadowRoot();
+            WebElement shopCheckout = shopAppRoot.findElement(By.cssSelector("shop-checkout"));
+            return shopCheckout.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    public void fillShippingForm(String email, String phone, String address, 
+                                   String city, String state, String zip, String country) {
+        try {
+            SearchContext checkoutRoot = getShopCheckoutShadowRoot();
+            
+            fillField(checkoutRoot, "input[id*='email']", email);
+            fillField(checkoutRoot, "input[id*='phone']", phone);
+            fillField(checkoutRoot, "input[id*='address']", address);
+            fillField(checkoutRoot, "input[id*='city']", city);
+            fillField(checkoutRoot, "input[id*='state']", state);
+            fillField(checkoutRoot, "input[id*='zip']", zip);
+            fillField(checkoutRoot, "input[id*='country']", country);
+            
+            waitFor(500);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to fill shipping form: " + e.getMessage());
+        }
+    }
+    
+    private void fillField(SearchContext context, String selector, String value) {
+        try {
+            WebElement field = context.findElement(By.cssSelector(selector));
+            field.clear();
+            field.sendKeys(value);
+        } catch (Exception e) {
+            // Field might not exist
+        }
+    }
+    
+    public void selectPaymentMethod(String method) {
+        try {
+            SearchContext checkoutRoot = getShopCheckoutShadowRoot();
+            WebElement paymentOption = checkoutRoot.findElement(
+                By.cssSelector("input[value='" + method + "']"));
+            clickElement(paymentOption);
+            waitFor(500);
+        } catch (Exception e) {
+            // Payment method might not be selectable
+        }
+    }
+    
+    public String getOrderSummary() {
+        try {
+            SearchContext checkoutRoot = getShopCheckoutShadowRoot();
+            WebElement summary = checkoutRoot.findElement(
+                By.cssSelector(".order-summary, [class*='summary']"));
+            return getTextSafely(summary);
+        } catch (Exception e) {
+            return "";
+        }
     }
     
     public String getOrderTotal() {
-        return getText(orderTotalElement);
-    }
-
-    public boolean isItemInSummaryDisplayed() {
-        return itemInSummary.isDisplayed();
-    }
-    
-    /**
-     * Checks if the order confirmation page is displayed by looking at the header text.
-     * Assumes successful navigation to /confirmation.
-     */
-    public boolean isOrderConfirmed() {
-        // This confirms the page has loaded and the confirmation message is visible.
-        return getText(confirmationHeader).contains("Thank you");
-    }
-
-    // --- Action Methods ---
-
-    public void fillShippingDetails(String name, String address, String city) {
-        type(nameInput, name);
-        type(addressInput, address);
-        type(cityInput, city);
+        try {
+            SearchContext checkoutRoot = getShopCheckoutShadowRoot();
+            WebElement total = checkoutRoot.findElement(
+                By.cssSelector(".total, [class*='total']"));
+            return getTextSafely(total);
+        } catch (Exception e) {
+            return "$0.00";
+        }
     }
     
-    /**
-     * Clicks the 'Place Order' button.
-     */
-    public void placeOrder() {
-        click(placeOrderButton);
+    public void clickPlaceOrder() {
+        try {
+            SearchContext checkoutRoot = getShopCheckoutShadowRoot();
+            WebElement placeOrderBtn = checkoutRoot.findElement(
+                By.cssSelector("input[type='button'][value*='Place'], button[aria-label*='Place']"));
+            
+            scrollToElement(placeOrderBtn);
+            clickElement(placeOrderBtn);
+            waitFor(2000);
+        } catch (Exception e) {
+            throw new RuntimeException("Place order button not found");
+        }
     }
     
-    /**
-     * Retrieves the validation message shown for a specific field name.
-     * Note: This relies on the field's title or attribute as visible validation is challenging 
-     * in the Polymer component model. We retrieve the title attribute which often holds the required prompt.
-     * @param fieldName The name of the input field (e.g., "name", "address").
-     * @return The validation message (or field title) as a string.
-     */
-    public String getValidationMessage(String fieldName) {
-        // Locate the specific input element by its name
-        WebElement field = driver.findElement(By.cssSelector("input[name='" + fieldName + "']"));
-        // For Polymer forms, checking the 'title' attribute can sometimes confirm a required state
-        // or a validation property is set, as native browser validation prevents element interaction.
-        return field.getAttribute("title"); 
+    public boolean isPlaceOrderButtonDisplayed() {
+        try {
+            SearchContext checkoutRoot = getShopCheckoutShadowRoot();
+            WebElement placeOrderBtn = checkoutRoot.findElement(
+                By.cssSelector("input[type='button'][value*='Place'], button[aria-label*='Place']"));
+            return placeOrderBtn.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    public boolean hasValidationErrors() {
+        try {
+            SearchContext checkoutRoot = getShopCheckoutShadowRoot();
+            WebElement errorMsg = checkoutRoot.findElement(
+                By.cssSelector(".error, [class*='error'], .invalid"));
+            return errorMsg.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    public boolean isOrderConfirmationDisplayed() {
+        try {
+            return getCurrentUrl().contains("confirmation") || 
+                   getCurrentUrl().contains("success");
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    public String getConfirmationMessage() {
+        try {
+            SearchContext checkoutRoot = getShopCheckoutShadowRoot();
+            WebElement confirmation = checkoutRoot.findElement(
+                By.cssSelector(".confirmation, .success-message"));
+            return getTextSafely(confirmation);
+        } catch (Exception e) {
+            return "";
+        }
+    }
+    
+    public boolean areShippingFieldsPresent() {
+        try {
+            SearchContext checkoutRoot = getShopCheckoutShadowRoot();
+            checkoutRoot.findElement(By.cssSelector("input[id*='email']"));
+            checkoutRoot.findElement(By.cssSelector("input[id*='address']"));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

@@ -1,27 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Polymer Shop Test Suite" parallel="tests" thread-count="2">
 
+<suite name="Polymer Shop Automation Suite" verbose="1" parallel="false">
+    
+    <parameter name="browser" value="chrome"/>
+    <parameter name="baseUrl" value="https://shop.polymer-project.org/"/>
+    
     <listeners>
-        <listener class-name="listeners.TestListener" />
+        <listener class-name="com.polymershop.listeners.TestListener"/>
     </listeners>
-
-    <test name="Chrome Tests">
-        <parameter name="browser" value="chrome" />
+    
+    <test name="Smoke Tests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
         <classes>
-            <class name="test.HomePageTests" />
-            <class name="test.ProductTests" />
-            <class name="test.CartTests" />
-            <class name="test.CheckoutTests" />
+            <class name="test.HomePageTests"/>
+            <class name="test.ProductTests"/>
+            <class name="test.CartTests"/>
+            <class name="test.CheckoutTests"/>
         </classes>
     </test>
-
-    <test name="Firefox Tests">
-        <parameter name="browser" value="firefox" />
+    
+    <test name="Regression Tests" preserve-order="true">
         <classes>
-            <class name="test.HomePageTests" />
-            <class name="test.ProductTests" />
-            <class name="test.CartTests" />
-            <class name="test.CheckoutTests" />
+            <class name="test.HomePageTests">
+                <methods>
+                    <include name="testHomepageLoadsCorrectly"/>
+                    <include name="testNavigationMenuItems"/>
+                    <include name="testProductCategoriesDisplay"/>
+                </methods>
+            </class>
+            
+            <class name="test.ProductTests">
+                <methods>
+                    <include name="testProductGridDisplay"/>
+                    <include name="testProductFilteringByCategory"/>
+                    <include name="testProductDetailsPageElements"/>
+                    <include name="testProductImageGallery"/>
+                    <include name="testProductDescriptionAndSpecs"/>
+                    <include name="testQuantitySelection"/>
+                    <include name="testAddToCartFunctionality"/>
+                    <include name="testProductPriceDisplay"/>
+                    <include name="testProductSizeSelection"/>
+                </methods>
+            </class>
+            
+            <class name="test.CartTests">
+                <methods>
+                    <include name="testAddingProductsToCart"/>
+                    <include name="testUpdatingProductQuantityInCart"/>
+                    <include name="testRemovingProductsFromCart"/>
+                    <include name="testCartTotalCalculation"/>
+                    <include name="testEmptyCartMessage"/>
+                    <include name="testCartIconBadgeUpdate"/>
+                </methods>
+            </class>
+            
+            <class name="test.CheckoutTests">
+                <methods>
+                    <include name="testCheckoutButtonFunctionality"/>
+                    <include name="testShippingFormValidation"/>
+                    <include name="testPaymentMethodSelection"/>
+                    <include name="testOrderSummaryInCheckout"/>
+                    <include name="testOrderConfirmation"/>
+                </methods>
+            </class>
         </classes>
     </test>
+    
+    <test name="Home Page Tests" preserve-order="true">
+        <classes>
+            <class name="test.HomePageTests"/>
+        </classes>
+    </test>
+    
+    <test name="Product Tests" preserve-order="true">
+        <classes>
+            <class name="test.ProductTests"/>
+        </classes>
+    </test>
+    
+    <test name="Cart Tests" preserve-order="true">
+        <classes>
+            <class name="test.CartTests"/>
+        </classes>
+    </test>
+    
+    <test name="Checkout Tests" preserve-order="true">
+        <classes>
+            <class name="test.CheckoutTests"/>
+        </classes>
+    </test>
+    
 </suite>

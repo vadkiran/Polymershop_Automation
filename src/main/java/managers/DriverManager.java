@@ -1,52 +1,66 @@
 package managers;
 
-
-
-import utils.ConfigReader;
-import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import utils.ConfigReader;
 
+/**
+ * DriverManager - Manages WebDriver instances
+ */
 public class DriverManager {
-    private static WebDriver driver;
-    private static final String CHROME_DRIVER_PATH = "path/to/chromedriver"; // Update with your path
-    private static final String FIREFOX_DRIVER_PATH = "path/to/geckodriver"; // Update with your path
-
-    private DriverManager() {
-        // Private constructor to prevent instantiation
-    }
-
+    
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    
+    /**
+     * Get WebDriver instance
+     */
     public static WebDriver getDriver() {
-        if (driver == null) {
-            String browser = ConfigReader.getProperty("browser").toLowerCase();
-            switch (browser) {
-                case "chrome":
-                    System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
-                    ChromeOptions chromeOptions = new ChromeOptions();
-                    driver = new ChromeDriver(chromeOptions);
-                    break;
-                case "firefox":
-                    System.setProperty("webdriver.gecko.driver", FIREFOX_DRIVER_PATH);
-                    FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    driver = new FirefoxDriver(firefoxOptions);
-                    break;
-                default:
-                    throw new RuntimeException("Invalid browser specified in config.properties: " + browser);
-            }
-           // driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicit.wait")), TimeUnit.SECONDS);
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(ConfigReader.getProperty("implicit.wait"))));
-            driver.manage().window().maximize();
+        if (driver.get() == null) {
+            driver.set(createDriver());
         }
-        return driver;
+        return driver.get();
     }
-
+    
+    /**
+     * Create WebDriver based on configuration
+     */
+    private static WebDriver createDriver() {
+        String browser = ConfigReader.getProperty("browser");
+        WebDriver webDriver;
+        
+        switch (browser.toLowerCase()) {
+            case "chrome":
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--start-maximized");
+                chromeOptions.addArguments("--disable-notifications");
+                chromeOptions.addArguments("--disable-popup-blocking");
+                chromeOptions.addArguments("--remote-allow-origins=*");
+                webDriver = new ChromeDriver(chromeOptions);
+                break;
+                
+            case "firefox":
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.addArguments("--start-maximized");
+                webDriver = new FirefoxDriver(firefoxOptions);
+                break;
+                
+            default:
+                throw new RuntimeException("Browser not supported: " + browser);
+        }
+        
+        return webDriver;
+    }
+    
+    /**
+     * Quit WebDriver
+     */
     public static void quitDriver() {
-        if (driver != null) {
-            driver.quit();
-            driver = null;
+        if (driver.get() != null) {
+            driver.get().quit();
+            driver.remove();
         }
     }
 }

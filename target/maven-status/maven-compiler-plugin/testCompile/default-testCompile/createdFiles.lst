@@ -1,7 +1,0 @@
-test\ProductTests.class
-test\HomePageTests.class
-suites\TestNGRunner.class
-test\CartTests.class
-listeners\TestListener.class
-data\TestDataProvider.class
-test\CheckoutTests.class

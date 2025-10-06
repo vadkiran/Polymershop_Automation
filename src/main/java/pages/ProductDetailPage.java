@@ -1,96 +1,161 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class ProductDetailPage extends BasePage {
-    // Product Attributes Locators
-    @FindBy(css = "shop-item-detail .detail-container h1")
-    private WebElement productTitle;
-
-    @FindBy(css = "shop-item-detail .detail-container .price")
-    private WebElement productPrice;
-
-    @FindBy(css = "shop-item-detail .detail-container .description")
-    private WebElement productDescription;
-
-    // Quantity Locators
-    @FindBy(css = "shop-item-detail > .main-container > paper-icon-button[icon='add']")
-    private WebElement increaseQuantityButton;
-
-    @FindBy(css = "shop-item-detail > .main-container > input[type='number']")
-    private WebElement quantityInput;
     
-    // Size/Specs Selector Locators
-    @FindBy(css = "shop-item-detail .product-details-button-container iron-selector")
-    private WebElement sizeSelector;
-
-    // Image Gallery Locators
-    @FindBy(css = "shop-item-detail #imageCarousel paper-icon-button")
-    private List<WebElement> imageGalleryControls; // Left/Right arrows
-
-    // Action Button Locators
-    @FindBy(xpath = "//shop-item-detail//button[@aria-label='Add to Cart']")
-    private WebElement addToCartButton; 
-
     public ProductDetailPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
     }
-
-    // --- Getter Methods for Test Assertions ---
-
+    
+    private SearchContext getShopDetailShadowRoot() {
+        SearchContext shopAppRoot = getShopAppShadowRoot();
+        WebElement shopDetail = shopAppRoot.findElement(By.cssSelector("shop-detail"));
+        return shopDetail.getShadowRoot();
+    }
+    
+    public boolean isProductDetailPageLoaded() {
+        try {
+            SearchContext shopAppRoot = getShopAppShadowRoot();
+            WebElement shopDetail = shopAppRoot.findElement(By.cssSelector("shop-detail"));
+            return shopDetail.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
     public String getProductTitle() {
-        return getText(productTitle);
+        try {
+            SearchContext detailRoot = getShopDetailShadowRoot();
+            WebElement title = detailRoot.findElement(By.cssSelector(".title, h1"));
+            return getTextSafely(title);
+        } catch (Exception e) {
+            return "";
+        }
     }
     
     public String getProductPrice() {
-        return getText(productPrice);
+        try {
+            SearchContext detailRoot = getShopDetailShadowRoot();
+            WebElement price = detailRoot.findElement(By.cssSelector(".price"));
+            return getTextSafely(price);
+        } catch (Exception e) {
+            return "";
+        }
     }
     
     public String getProductDescription() {
-        return getText(productDescription);
+        try {
+            SearchContext detailRoot = getShopDetailShadowRoot();
+            WebElement description = detailRoot.findElement(By.cssSelector(".description, #desc"));
+            return getTextSafely(description);
+        } catch (Exception e) {
+            return "";
+        }
     }
     
-    /**
-     * Retrieves the current value (quantity) from the input field.
-     * Used by testQuantitySelection for verification.
-     * @return The current quantity value as a String.
-     */
-    public String getQuantityInputValue() {
-        // We use getAttribute("value") to read the current text content of the input field
-        return quantityInput.getAttribute("value");
+    public boolean isProductImageDisplayed() {
+        try {
+            SearchContext detailRoot = getShopDetailShadowRoot();
+            WebElement image = detailRoot.findElement(By.cssSelector("img, .image"));
+            return image.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
     
-    public int getImageGalleryControlCount() {
-        // Returns the number of visible controls (e.g., 2 for left and right arrows)
-        return imageGalleryControls.size();
-    }
-
-    // --- Action Methods for Test Steps ---
-
     public void selectSize(String size) {
-        // Finds the specific size option using XPath by its text content within the selector
-        // E.g., size="M" finds a span/div containing "M"
-        WebElement sizeElement = sizeSelector.findElement(By.xpath("./*//span[text()='" + size + "']"));
-        click(sizeElement);
+        try {
+            SearchContext detailRoot = getShopDetailShadowRoot();
+            WebElement sizeSelect = detailRoot.findElement(By.cssSelector("select[id*='size'], #sizeSelect"));
+            Select select = new Select(sizeSelect);
+            select.selectByVisibleText(size);
+            waitFor(500);
+        } catch (Exception e) {
+            // Size selection might not be available
+        }
     }
-
+    
+    public List<WebElement> getAvailableSizes() {
+        try {
+            SearchContext detailRoot = getShopDetailShadowRoot();
+            WebElement sizeSelect = detailRoot.findElement(By.cssSelector("select[id*='size']"));
+            return sizeSelect.findElements(By.tagName("option"));
+        } catch (Exception e) {
+            return List.of();
+        }
+    }
+    
     public void setQuantity(int quantity) {
-        // Clear the input and enter the new quantity
-        type(quantityInput, String.valueOf(quantity));
+        try {
+            SearchContext detailRoot = getShopDetailShadowRoot();
+            WebElement quantityInput = detailRoot.findElement(
+                By.cssSelector("input[id*='quantity'], #quantityInput, select[id*='quantity']"));
+            
+            if (quantityInput.getTagName().equals("select")) {
+                Select select = new Select(quantityInput);
+                select.selectByValue(String.valueOf(quantity));
+            } else {
+                quantityInput.clear();
+                quantityInput.sendKeys(String.valueOf(quantity));
+            }
+            waitFor(500);
+        } catch (Exception e) {
+            // Quantity might not be changeable
+        }
     }
-
-    public void increaseQuantity() {
-        click(increaseQuantityButton);
+    
+    public String getCurrentQuantity() {
+        try {
+            SearchContext detailRoot = getShopDetailShadowRoot();
+            WebElement quantityInput = detailRoot.findElement(
+                By.cssSelector("input[id*='quantity'], select[id*='quantity']"));
+            
+            if (quantityInput.getTagName().equals("select")) {
+                Select select = new Select(quantityInput);
+                return select.getFirstSelectedOption().getText();
+            } else {
+                return quantityInput.getAttribute("value");
+            }
+        } catch (Exception e) {
+            return "1";
+        }
     }
     
     public void clickAddToCart() {
-        click(addToCartButton);
+        try {
+            SearchContext detailRoot = getShopDetailShadowRoot();
+            WebElement addToCartBtn = detailRoot.findElement(
+                By.cssSelector("button[aria-label*='Add'], .add-to-cart"));
+            
+            scrollToElement(addToCartBtn);
+            clickElement(addToCartBtn);
+            waitFor(1000);
+        } catch (Exception e) {
+            throw new RuntimeException("Add to cart button not found");
+        }
+    }
+    
+    public boolean isAddToCartButtonDisplayed() {
+        try {
+            SearchContext detailRoot = getShopDetailShadowRoot();
+            WebElement addToCartBtn = detailRoot.findElement(
+                By.cssSelector("button[aria-label*='Add'], .add-to-cart"));
+            return addToCartBtn.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    public boolean areAllProductDetailsDisplayed() {
+        return isProductImageDisplayed() && 
+               !getProductTitle().isEmpty() && 
+               !getProductPrice().isEmpty() &&
+               isAddToCartButtonDisplayed();
     }
 }

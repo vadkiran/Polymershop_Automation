@@ -1,50 +1,50 @@
 package suites;
 
-
 import org.testng.TestNG;
 import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
-
+import org.testng.xml.XmlClass;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * TestNGRunner - Programmatic TestNG execution
+ */
 public class TestNGRunner {
-
+    
     public static void main(String[] args) {
+        // Create TestNG instance
         TestNG testng = new TestNG();
-
-        // Create a new XML suite programmatically
+        
+        // Create Suite
         XmlSuite suite = new XmlSuite();
-        suite.setName("Polymer Shop Test Suite");
-        suite.setParallel(XmlSuite.ParallelMode.TESTS);
-        suite.setThreadCount(2);
-
-        // Create a test for Chrome
-        XmlTest chromeTest = new XmlTest(suite);
-        chromeTest.setName("Chrome Tests");
-        chromeTest.setClasses(createClassList("com.polymershop.tests.HomePageTests", 
-        		"com.polymershop.tests.ProductTests", "com.polymershop.tests.CartTests", "com.polymershop.tests.CheckoutTests"));
+        suite.setName("Polymer Shop Automation Suite");
+        suite.setVerbose(1);
         
-        // Create a test for Firefox
-        XmlTest firefoxTest = new XmlTest(suite);
-        firefoxTest.setName("Firefox Tests");
-        firefoxTest.setClasses(createClassList("com.polymershop.tests.HomePageTests", "com.polymershop.tests.ProductTests", "com.polymershop.tests.CartTests"));
+        // Create Test
+        XmlTest test = new XmlTest(suite);
+        test.setName("All Tests");
         
-        // Set the listeners
-        suite.addListener("com.polymershop.listeners.TestListener");
-
+        // Add test classes
+        List<XmlClass> classes = new ArrayList<>();
+        classes.add(new XmlClass("test.HomePageTests"));
+        classes.add(new XmlClass("test.ProductTests"));
+        classes.add(new XmlClass("test.CartTests"));
+        classes.add(new XmlClass("test.CheckoutTests"));
+        
+        test.setXmlClasses(classes);
+        
+        // Add test to suite
+        List<XmlTest> tests = new ArrayList<>();
+        tests.add(test);
+        suite.setTests(tests);
+        
+        // Add suite to TestNG
         List<XmlSuite> suites = new ArrayList<>();
         suites.add(suite);
-
         testng.setXmlSuites(suites);
+        
+        // Run tests
         testng.run();
-    }
-    
-    private static List<org.testng.xml.XmlClass> createClassList(String... classNames) {
-        List<org.testng.xml.XmlClass> classes = new ArrayList<>();
-        for (String className : classNames) {
-            classes.add(new org.testng.xml.XmlClass(className));
-        }
-        return classes;
     }
 }

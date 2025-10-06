@@ -3,7 +3,8 @@ utils\ExcelReader.class
 pages\ProductListingPage.class
 pages\CartPage.class
 pages\HomePage.class
-pages\CheckoutPage.class
 utils\ConfigReader.class
-pages\ProductDetailPage.class
 managers\DriverManager.class
+pages\CheckoutPage.class
+utils\ExcelReader$1.class
+pages\ProductDetailPage.class

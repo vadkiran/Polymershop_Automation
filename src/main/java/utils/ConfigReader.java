@@ -1,31 +1,34 @@
 package utils;
 
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
+    
     private static Properties properties;
-
+    private static final String CONFIG_FILE_PATH = "src/main/resources/config.properties";
+    
     static {
         try {
-            String filePath = "resources/Config.properties";
-            FileInputStream fis = new FileInputStream(filePath);
+            FileInputStream fis = new FileInputStream(CONFIG_FILE_PATH);
             properties = new Properties();
             properties.load(fis);
+            fis.close();
         } catch (IOException e) {
-            e.printStackTrace();
-            throw new RuntimeException("config.properties file not found at " + "resources/Config.properties");
+            throw new RuntimeException("Failed to load config file: " + e.getMessage());
         }
     }
-
+    
     public static String getProperty(String key) {
         String value = properties.getProperty(key);
-        if (value != null) {
-            return value;
-        } else {
-            throw new RuntimeException("Property '" + key + "' not found in config.properties file.");
+        if (value == null) {
+            throw new RuntimeException("Property not found: " + key);
         }
+        return value;
+    }
+    
+    public static String getProperty(String key, String defaultValue) {
+        return properties.getProperty(key, defaultValue);
     }
 }
