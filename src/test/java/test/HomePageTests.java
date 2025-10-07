@@ -32,7 +32,7 @@ public class HomePageTests {
     /**
      * Verify homepage loads correctly
      */
-    @Test(priority = 1, groups = {"smoke", "home"}, 
+    @Test(priority = 1, 
           description = "Verify homepage loads correctly")
     public void testHomepageLoadsCorrectly() throws InterruptedException {
         assertTrue(homePage.isPageLoaded(), "Homepage should load successfully");
@@ -44,7 +44,7 @@ public class HomePageTests {
     /**
      * Verify navigation menu items
      */
-    @Test(priority = 2, groups = {"smoke", "home"}, 
+    @Test(priority = 2, 
           description = "Verify navigation menu items are displayed")
     public void testNavigationMenuItems() throws InterruptedException {
         assertTrue(homePage.isNavigationMenuDisplayed(), 
@@ -59,7 +59,7 @@ public class HomePageTests {
     /**
      * Verify product categories display
      */
-    @Test(priority = 3, groups = {"smoke", "home"}, 
+    @Test(priority = 3,
           description = "Verify product categories are accessible")
     public void testProductCategoriesDisplay() throws InterruptedException {
         homePage.navigateToMenCategory();

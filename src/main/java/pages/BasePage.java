@@ -3,12 +3,9 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.ConfigReader;
 import java.time.Duration;
 
-/**
- * BasePage - Core page object with Shadow DOM utilities
- * Handles common operations and Shadow DOM navigation
- */
 public class BasePage {
     
     protected WebDriver driver;
@@ -16,31 +13,42 @@ public class BasePage {
     protected JavascriptExecutor js;
     private static final int DEFAULT_TIMEOUT = 15;
     
+    // Wait times from config
+    protected long SHORT_WAIT;
+    protected long MEDIUM_WAIT;
+    protected long LONG_WAIT;
+    protected long PAGE_LOAD_WAIT;
+    
     public BasePage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT));
         this.js = (JavascriptExecutor) driver;
+        
+        // Load wait times from config
+        try {
+            SHORT_WAIT = Long.parseLong(ConfigReader.getProperty("short.wait", "1000"));
+            MEDIUM_WAIT = Long.parseLong(ConfigReader.getProperty("medium.wait", "2000"));
+            LONG_WAIT = Long.parseLong(ConfigReader.getProperty("long.wait", "3000"));
+            PAGE_LOAD_WAIT = Long.parseLong(ConfigReader.getProperty("page.load.wait", "2000"));
+        } catch (Exception e) {
+            // Use defaults if config fails
+            SHORT_WAIT = 1000;
+            MEDIUM_WAIT = 2000;
+            LONG_WAIT = 3000;
+            PAGE_LOAD_WAIT = 2000;
+        }
     }
     
-    /**
-     * Get shop-app shadow root (main container)
-     */
     protected SearchContext getShopAppShadowRoot() {
         WebElement shopApp = wait.until(ExpectedConditions.presenceOfElementLocated(
             By.cssSelector("shop-app")));
         return shopApp.getShadowRoot();
     }
     
-    /**
-     * Get shadow root of any element
-     */
     protected SearchContext getShadowRoot(WebElement element) {
         return element.getShadowRoot();
     }
     
-    /**
-     * Find element in shadow DOM with explicit wait
-     */
     protected WebElement findElementInShadow(SearchContext shadowRoot, String cssSelector) {
         return wait.until(driver -> {
             try {
@@ -55,9 +63,6 @@ public class BasePage {
         });
     }
     
-    /**
-     * Click with retry and JS fallback
-     */
     protected void clickElement(WebElement element) {
         try {
             waitForElementClickable(element);
@@ -67,47 +72,29 @@ public class BasePage {
         }
     }
     
-    /**
-     * Wait for element to be clickable
-     */
     protected void waitForElementClickable(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
     
-    /**
-     * Wait for URL to contain text
-     */
     protected void waitForUrlContains(String urlFragment) {
         wait.until(ExpectedConditions.urlContains(urlFragment));
     }
     
-    /**
-     * Scroll to element using JS (for lazy loading)
-     */
     protected void scrollToElement(WebElement element) {
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
         waitFor(500);
     }
     
-    /**
-     * Scroll to bottom (trigger lazy loading)
-     */
     protected void scrollToBottom() {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
-        waitFor(1000);
+        waitFor(SHORT_WAIT);
     }
     
-    /**
-     * Wait for page load complete
-     */
     protected void waitForPageLoad() {
         wait.until(driver -> 
             js.executeScript("return document.readyState").equals("complete"));
     }
     
-    /**
-     * Check if element is present
-     */
     protected boolean isElementPresent(By locator) {
         try {
             driver.findElement(locator);
@@ -117,9 +104,6 @@ public class BasePage {
         }
     }
     
-    /**
-     * Get element text safely
-     */
     protected String getTextSafely(WebElement element) {
         try {
             return element.getText().trim();
@@ -128,9 +112,6 @@ public class BasePage {
         }
     }
     
-    /**
-     * Simple wait
-     */
     protected void waitFor(long milliseconds) {
         try {
             Thread.sleep(milliseconds);
@@ -139,16 +120,10 @@ public class BasePage {
         }
     }
     
-    /**
-     * Get current URL
-     */
     protected String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
     
-    /**
-     * Navigate to URL
-     */
     protected void navigateTo(String url) {
         driver.get(url);
         waitForPageLoad();

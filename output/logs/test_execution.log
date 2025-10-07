@@ -1,0 +1,9 @@
+2025-10-07 18:29:37.951 [main] INFO  org.testng.internal.Utils - [XmlSuite] [WARN] 'parallel' value 'false' is no longer valid, defaulting to 'none'.
+2025-10-07 18:46:47.015 [main] INFO  org.testng.internal.Utils - [XmlSuite] [WARN] 'parallel' value 'false' is no longer valid, defaulting to 'none'.
+2025-10-07 18:46:47.245 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\kvina\eclipse-workspace\polymershop\src\test\resources\testng.xml
+
+2025-10-07 22:11:22.832 [main] INFO  org.testng.internal.Utils - [XmlSuite] [WARN] 'parallel' value 'false' is no longer valid, defaulting to 'none'.
+2025-10-07 22:11:23.668 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\kvina\eclipse-workspace\polymershop\src\test\resources\testng.xml
+

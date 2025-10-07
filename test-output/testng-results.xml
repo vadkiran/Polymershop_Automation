@@ -1,73 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="0" failed="5" skipped="0">
+<testng-results ignored="1" total="22" passed="19" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-06T13:03:31 IST" name="Default suite" finished-at="2025-10-06T13:05:48 IST" duration-ms="137029">
+  <suite started-at="2025-10-07T22:11:23 IST" name="Polymer Shop Automation Suite" finished-at="2025-10-07T22:18:11 IST" duration-ms="407865">
     <groups>
-      <group name="regression">
-        <method signature="CheckoutTests.testShippingFormValidation()[pri:2, instance:test.CheckoutTests@1573f9fc]" name="testShippingFormValidation" class="test.CheckoutTests"/>
-        <method signature="CheckoutTests.testPaymentMethodSelection()[pri:3, instance:test.CheckoutTests@1573f9fc]" name="testPaymentMethodSelection" class="test.CheckoutTests"/>
-        <method signature="CheckoutTests.testOrderSummaryInCheckout()[pri:4, instance:test.CheckoutTests@1573f9fc]" name="testOrderSummaryInCheckout" class="test.CheckoutTests"/>
-      </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="CheckoutTests.testCheckoutButtonFunctionality()[pri:1, instance:test.CheckoutTests@1573f9fc]" name="testCheckoutButtonFunctionality" class="test.CheckoutTests"/>
-        <method signature="CheckoutTests.testOrderConfirmation()[pri:5, instance:test.CheckoutTests@1573f9fc]" name="testOrderConfirmation" class="test.CheckoutTests"/>
-      </group> <!-- smoke -->
-      <group name="checkout">
-        <method signature="CheckoutTests.testCheckoutButtonFunctionality()[pri:1, instance:test.CheckoutTests@1573f9fc]" name="testCheckoutButtonFunctionality" class="test.CheckoutTests"/>
-        <method signature="CheckoutTests.testShippingFormValidation()[pri:2, instance:test.CheckoutTests@1573f9fc]" name="testShippingFormValidation" class="test.CheckoutTests"/>
-        <method signature="CheckoutTests.testPaymentMethodSelection()[pri:3, instance:test.CheckoutTests@1573f9fc]" name="testPaymentMethodSelection" class="test.CheckoutTests"/>
-        <method signature="CheckoutTests.testOrderSummaryInCheckout()[pri:4, instance:test.CheckoutTests@1573f9fc]" name="testOrderSummaryInCheckout" class="test.CheckoutTests"/>
-        <method signature="CheckoutTests.testOrderConfirmation()[pri:5, instance:test.CheckoutTests@1573f9fc]" name="testOrderConfirmation" class="test.CheckoutTests"/>
-      </group> <!-- checkout -->
     </groups>
-    <test started-at="2025-10-06T13:03:31 IST" name="Default test" finished-at="2025-10-06T13:05:48 IST" duration-ms="137029">
-      <class name="test.CheckoutTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:03:31 IST" name="setUp" finished-at="2025-10-06T13:03:56 IST" duration-ms="25453" status="PASS">
+    <test started-at="2025-10-07T22:11:23 IST" name="Regression Tests" finished-at="2025-10-07T22:18:11 IST" duration-ms="407865">
+      <class name="test.InvalidFeatureTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.InvalidFeatureTests@306851c7]" started-at="2025-10-07T22:17:55 IST" name="setUp" finished-at="2025-10-07T22:18:03 IST" duration-ms="7515" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testCheckoutButtonFunctionality()[pri:1, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:03:56 IST" name="testCheckoutButtonFunctionality" description="TC-21: Verify checkout button navigates to checkout page" finished-at="2025-10-06T13:03:59 IST" duration-ms="2643" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="testProductSortingOptions()[pri:1, instance:test.InvalidFeatureTests@306851c7]" started-at="2025-10-07T22:18:03 IST" name="testProductSortingOptions" description="INVALID: Product sorting feature does not exist" finished-at="2025-10-07T22:18:03 IST" duration-ms="4" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"shop-header"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [88928d76cdde6f53735ee17201dd3202, findElementFromShadowRoot {shadowId=f.E477670DDCB081719DBE7A20DE6D6251.d.094E065EC8B24B7BCA8464CDD601DC30.e.6, using=css selector, value=shop-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\kvina\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64046}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64046/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 88928d76cdde6f53735ee17201dd3202]]>
+              <![CDATA[EXPECTED FAILURE: Product sorting feature is not implemented on Polymer Shop]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"shop-header"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [88928d76cdde6f53735ee17201dd3202, findElementFromShadowRoot {shadowId=f.E477670DDCB081719DBE7A20DE6D6251.d.094E065EC8B24B7BCA8464CDD601DC30.e.6, using=css selector, value=shop-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\kvina\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64046}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64046/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 88928d76cdde6f53735ee17201dd3202
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:54)
-at pages.HomePage.openCart(HomePage.java:101)
-at test.CheckoutTests.testCheckoutButtonFunctionality(CheckoutTests.java:50)
+              <![CDATA[java.lang.AssertionError: EXPECTED FAILURE: Product sorting feature is not implemented on Polymer Shop
+at org.testng.Assert.fail(Assert.java:111)
+at test.InvalidFeatureTests.testProductSortingOptions(InvalidFeatureTests.java:49)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -98,59 +50,27 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCheckoutButtonFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:03:59 IST" name="tearDown" finished-at="2025-10-06T13:04:00 IST" duration-ms="645" status="PASS">
+        </test-method> <!-- testProductSortingOptions -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.InvalidFeatureTests@306851c7]" started-at="2025-10-07T22:18:03 IST" name="tearDown" finished-at="2025-10-07T22:18:04 IST" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:04:00 IST" name="setUp" finished-at="2025-10-06T13:04:24 IST" duration-ms="23834" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.InvalidFeatureTests@306851c7]" started-at="2025-10-07T22:18:04 IST" name="setUp" finished-at="2025-10-07T22:18:07 IST" duration-ms="3257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testShippingFormValidation()[pri:2, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:04:24 IST" name="testShippingFormValidation" description="TC-22: Verify shipping form fields are present and validated" finished-at="2025-10-06T13:04:26 IST" duration-ms="2605" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="testProductPagination()[pri:3, instance:test.InvalidFeatureTests@306851c7]" started-at="2025-10-07T22:18:07 IST" name="testProductPagination" description="INVALID: Pagination does not exist" finished-at="2025-10-07T22:18:07 IST" duration-ms="1" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"shop-header"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [71bb1c4d499055487ea2aa4ee94aa882, findElementFromShadowRoot {shadowId=f.3C0B1A0A83F7B61496D74E385CC9DE15.d.198443B132F743227E3641505952509B.e.5, using=css selector, value=shop-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\kvina\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57396}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57396/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 71bb1c4d499055487ea2aa4ee94aa882]]>
+              <![CDATA[EXPECTED FAILURE: Pagination feature is not implemented on Polymer Shop]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"shop-header"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [71bb1c4d499055487ea2aa4ee94aa882, findElementFromShadowRoot {shadowId=f.3C0B1A0A83F7B61496D74E385CC9DE15.d.198443B132F743227E3641505952509B.e.5, using=css selector, value=shop-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\kvina\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57396}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57396/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 71bb1c4d499055487ea2aa4ee94aa882
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:54)
-at pages.HomePage.openCart(HomePage.java:101)
-at test.CheckoutTests.testShippingFormValidation(CheckoutTests.java:68)
+              <![CDATA[java.lang.AssertionError: EXPECTED FAILURE: Pagination feature is not implemented on Polymer Shop
+at org.testng.Assert.fail(Assert.java:111)
+at test.InvalidFeatureTests.testProductPagination(InvalidFeatureTests.java:77)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -181,264 +101,249 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testShippingFormValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:04:26 IST" name="tearDown" finished-at="2025-10-06T13:04:27 IST" duration-ms="588" status="PASS">
+        </test-method> <!-- testProductPagination -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.InvalidFeatureTests@306851c7]" started-at="2025-10-07T22:18:08 IST" name="tearDown" finished-at="2025-10-07T22:18:08 IST" duration-ms="253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:04:27 IST" name="setUp" finished-at="2025-10-06T13:04:50 IST" duration-ms="23657" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.InvalidFeatureTests@306851c7]" started-at="2025-10-07T22:18:08 IST" name="setUp" finished-at="2025-10-07T22:18:11 IST" duration-ms="3046" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testPaymentMethodSelection()[pri:3, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:04:50 IST" name="testPaymentMethodSelection" description="TC-23: Verify payment method can be selected" finished-at="2025-10-06T13:04:53 IST" duration-ms="2607" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"shop-header"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ff3ae0ca84723ee959ee1a544fb8e67d, findElementFromShadowRoot {shadowId=f.3CE6CBB9873479ED4A5929E2EBA243C4.d.7F5586B4E2CB82F93BAA4FACEA114015.e.5, using=css selector, value=shop-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\kvina\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62975}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62975/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ff3ae0ca84723ee959ee1a544fb8e67d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"shop-header"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ff3ae0ca84723ee959ee1a544fb8e67d, findElementFromShadowRoot {shadowId=f.3CE6CBB9873479ED4A5929E2EBA243C4.d.7F5586B4E2CB82F93BAA4FACEA114015.e.5, using=css selector, value=shop-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\kvina\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62975}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62975/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ff3ae0ca84723ee959ee1a544fb8e67d
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:54)
-at pages.HomePage.openCart(HomePage.java:101)
-at test.CheckoutTests.testPaymentMethodSelection(CheckoutTests.java:91)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="reportInvalidFeatures()[pri:4, instance:test.InvalidFeatureTests@306851c7]" started-at="2025-10-07T22:18:11 IST" name="reportInvalidFeatures" description="Report invalid features found" finished-at="2025-10-07T22:18:11 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPaymentMethodSelection -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:04:53 IST" name="tearDown" finished-at="2025-10-06T13:04:54 IST" duration-ms="589" status="PASS">
+        </test-method> <!-- reportInvalidFeatures -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.InvalidFeatureTests@306851c7]" started-at="2025-10-07T22:18:11 IST" name="tearDown" finished-at="2025-10-07T22:18:11 IST" duration-ms="215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:04:54 IST" name="setUp" finished-at="2025-10-06T13:05:18 IST" duration-ms="23904" status="PASS">
+      </class> <!-- test.InvalidFeatureTests -->
+      <class name="test.CartTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:15:17 IST" name="setUp" finished-at="2025-10-07T22:15:22 IST" duration-ms="5225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testOrderSummaryInCheckout()[pri:4, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:05:18 IST" name="testOrderSummaryInCheckout" description="TC-24: Verify order summary is displayed in checkout" finished-at="2025-10-06T13:05:20 IST" duration-ms="2627" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"shop-header"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2cf8666ffa7591c7ef6fa2b4771fcb41, findElementFromShadowRoot {shadowId=f.6959AE6D29FF023952F141E8268A484F.d.3115CB67811720FE6D534329A130E850.e.5, using=css selector, value=shop-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\kvina\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63899/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cf8666ffa7591c7ef6fa2b4771fcb41]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"shop-header"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2cf8666ffa7591c7ef6fa2b4771fcb41, findElementFromShadowRoot {shadowId=f.6959AE6D29FF023952F141E8268A484F.d.3115CB67811720FE6D534329A130E850.e.5, using=css selector, value=shop-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\kvina\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63899/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cf8666ffa7591c7ef6fa2b4771fcb41
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:54)
-at pages.HomePage.openCart(HomePage.java:101)
-at test.CheckoutTests.testOrderSummaryInCheckout(CheckoutTests.java:119)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="testAddingProductsToCart()[pri:1, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:15:22 IST" name="testAddingProductsToCart" description="TC-16: Verify products can be added to cart" finished-at="2025-10-07T22:15:45 IST" duration-ms="22448" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testOrderSummaryInCheckout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:05:20 IST" name="tearDown" finished-at="2025-10-06T13:05:21 IST" duration-ms="574" status="PASS">
+        </test-method> <!-- testAddingProductsToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:15:45 IST" name="tearDown" finished-at="2025-10-07T22:15:45 IST" duration-ms="279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:05:21 IST" name="setUp" finished-at="2025-10-06T13:05:45 IST" duration-ms="23881" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:15:45 IST" name="setUp" finished-at="2025-10-07T22:15:51 IST" duration-ms="5452" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testOrderConfirmation()[pri:5, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:05:45 IST" name="testOrderConfirmation" description="TC-25: Verify order confirmation after placing order" finished-at="2025-10-06T13:05:47 IST" duration-ms="2646" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"shop-header"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [99babe87656ee34cf9931cd439daf64b, findElementFromShadowRoot {shadowId=f.359C651EE916EF659AF701244DB1F182.d.B76429B8F6F891ED3CFF05B4DC1BCA9F.e.5, using=css selector, value=shop-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\kvina\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63934}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63934/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 99babe87656ee34cf9931cd439daf64b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"shop-header"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [99babe87656ee34cf9931cd439daf64b, findElementFromShadowRoot {shadowId=f.359C651EE916EF659AF701244DB1F182.d.B76429B8F6F891ED3CFF05B4DC1BCA9F.e.5, using=css selector, value=shop-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\kvina\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63934}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63934/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 99babe87656ee34cf9931cd439daf64b
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:54)
-at pages.HomePage.openCart(HomePage.java:101)
-at test.CheckoutTests.testOrderConfirmation(CheckoutTests.java:132)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="testUpdatingProductQuantityInCart()[pri:2, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:15:51 IST" name="testUpdatingProductQuantityInCart" description="Verify product quantity can be updated in cart" finished-at="2025-10-07T22:16:16 IST" duration-ms="25335" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testOrderConfirmation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CheckoutTests@1573f9fc]" started-at="2025-10-06T13:05:47 IST" name="tearDown" finished-at="2025-10-06T13:05:48 IST" duration-ms="592" status="PASS">
+        </test-method> <!-- testUpdatingProductQuantityInCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:16:16 IST" name="tearDown" finished-at="2025-10-07T22:16:16 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- test.CheckoutTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:16:16 IST" name="setUp" finished-at="2025-10-07T22:16:21 IST" duration-ms="5298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRemovingProductsFromCart()[pri:3, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:16:21 IST" name="testRemovingProductsFromCart" description="Verify products can be removed from cart" finished-at="2025-10-07T22:16:47 IST" duration-ms="25365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemovingProductsFromCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:16:47 IST" name="tearDown" finished-at="2025-10-07T22:16:47 IST" duration-ms="267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:16:47 IST" name="setUp" finished-at="2025-10-07T22:16:52 IST" duration-ms="5139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCartTotalCalculation()[pri:4, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:16:52 IST" name="testCartTotalCalculation" description=" Verify cart total is calculated correctly" finished-at="2025-10-07T22:17:14 IST" duration-ms="22269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCartTotalCalculation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:17:14 IST" name="tearDown" finished-at="2025-10-07T22:17:15 IST" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:17:15 IST" name="setUp" finished-at="2025-10-07T22:17:20 IST" duration-ms="5378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testEmptyCartMessage()[pri:5, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:17:20 IST" name="testEmptyCartMessage" description="TC-20: Verify empty cart message is displayed" finished-at="2025-10-07T22:17:26 IST" duration-ms="6305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyCartMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:17:26 IST" name="tearDown" finished-at="2025-10-07T22:17:27 IST" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:17:27 IST" name="setUp" finished-at="2025-10-07T22:17:32 IST" duration-ms="5289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCartIconBadgeUpdate()[pri:6, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:17:32 IST" name="testCartIconBadgeUpdate" description="Verify cart icon badge updates when items are added" finished-at="2025-10-07T22:17:55 IST" duration-ms="23222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCartIconBadgeUpdate -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CartTests@37b70343]" started-at="2025-10-07T22:17:55 IST" name="tearDown" finished-at="2025-10-07T22:17:55 IST" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.CartTests -->
+      <class name="test.HomePageTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.HomePageTests@1f2f9244]" started-at="2025-10-07T22:11:24 IST" name="setUp" finished-at="2025-10-07T22:11:34 IST" duration-ms="10363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testHomepageLoadsCorrectly()[pri:1, instance:test.HomePageTests@1f2f9244]" started-at="2025-10-07T22:11:34 IST" name="testHomepageLoadsCorrectly" description="Verify homepage loads correctly" finished-at="2025-10-07T22:11:39 IST" duration-ms="4886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHomepageLoadsCorrectly -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.HomePageTests@1f2f9244]" started-at="2025-10-07T22:11:39 IST" name="tearDown" finished-at="2025-10-07T22:11:40 IST" duration-ms="528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.HomePageTests@1f2f9244]" started-at="2025-10-07T22:11:40 IST" name="setUp" finished-at="2025-10-07T22:11:48 IST" duration-ms="7844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testNavigationMenuItems()[pri:2, instance:test.HomePageTests@1f2f9244]" started-at="2025-10-07T22:11:48 IST" name="testNavigationMenuItems" description="Verify navigation menu items are displayed" finished-at="2025-10-07T22:11:57 IST" duration-ms="9246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigationMenuItems -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.HomePageTests@1f2f9244]" started-at="2025-10-07T22:11:57 IST" name="tearDown" finished-at="2025-10-07T22:11:58 IST" duration-ms="1178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.HomePageTests@1f2f9244]" started-at="2025-10-07T22:11:58 IST" name="setUp" finished-at="2025-10-07T22:12:06 IST" duration-ms="7696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testProductCategoriesDisplay()[pri:3, instance:test.HomePageTests@1f2f9244]" started-at="2025-10-07T22:12:06 IST" name="testProductCategoriesDisplay" description="Verify product categories are accessible" finished-at="2025-10-07T22:12:22 IST" duration-ms="16445" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductCategoriesDisplay -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.HomePageTests@1f2f9244]" started-at="2025-10-07T22:12:22 IST" name="tearDown" finished-at="2025-10-07T22:12:23 IST" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.HomePageTests -->
+      <class name="test.ProductTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:12:23 IST" name="setUp" finished-at="2025-10-07T22:12:31 IST" duration-ms="7793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testProductGridDisplay()[pri:1, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:12:31 IST" name="testProductGridDisplay" description="Verify product grid displays products" finished-at="2025-10-07T22:12:42 IST" duration-ms="11223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductGridDisplay -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:12:42 IST" name="tearDown" finished-at="2025-10-07T22:12:42 IST" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:12:42 IST" name="setUp" finished-at="2025-10-07T22:12:47 IST" duration-ms="5372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testProductFilteringByCategory()[pri:2, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:12:47 IST" name="testProductFilteringByCategory" description="Verify products can be filtered by category" finished-at="2025-10-07T22:13:03 IST" duration-ms="15576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductFilteringByCategory -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:03 IST" name="tearDown" finished-at="2025-10-07T22:13:03 IST" duration-ms="248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:03 IST" name="setUp" finished-at="2025-10-07T22:13:08 IST" duration-ms="5109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testProductDetailsPageElements()[pri:3, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:08 IST" name="testProductDetailsPageElements" description="Verify all product detail page elements are displayed" finished-at="2025-10-07T22:13:20 IST" duration-ms="11543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductDetailsPageElements -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:20 IST" name="tearDown" finished-at="2025-10-07T22:13:20 IST" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:20 IST" name="setUp" finished-at="2025-10-07T22:13:25 IST" duration-ms="5107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testProductImageGallery()[pri:4, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:25 IST" name="testProductImageGallery" description="Verify product image is displayed" finished-at="2025-10-07T22:13:37 IST" duration-ms="11415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductImageGallery -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:37 IST" name="tearDown" finished-at="2025-10-07T22:13:37 IST" duration-ms="254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:37 IST" name="setUp" finished-at="2025-10-07T22:13:42 IST" duration-ms="5149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testProductDescriptionAndSpecs()[pri:5, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:42 IST" name="testProductDescriptionAndSpecs" description="Verify product description and specifications" finished-at="2025-10-07T22:13:54 IST" duration-ms="11569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductDescriptionAndSpecs -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:54 IST" name="tearDown" finished-at="2025-10-07T22:13:54 IST" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:54 IST" name="setUp" finished-at="2025-10-07T22:13:59 IST" duration-ms="5182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testQuantitySelection()[pri:6, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:13:59 IST" name="testQuantitySelection" description="Verify quantity can be selected" finished-at="2025-10-07T22:14:12 IST" duration-ms="13164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testQuantitySelection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:14:12 IST" name="tearDown" finished-at="2025-10-07T22:14:12 IST" duration-ms="252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:14:12 IST" name="setUp" finished-at="2025-10-07T22:14:18 IST" duration-ms="5272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddToCartFunctionality()[pri:7, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:14:18 IST" name="testAddToCartFunctionality" description="Verify add to cart button functionality" finished-at="2025-10-07T22:14:41 IST" duration-ms="23271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddToCartFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:14:41 IST" name="tearDown" finished-at="2025-10-07T22:14:41 IST" duration-ms="285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:14:41 IST" name="setUp" finished-at="2025-10-07T22:14:47 IST" duration-ms="5206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testProductPriceDisplay()[pri:8, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:14:47 IST" name="testProductPriceDisplay" description="Verify product price is displayed correctly" finished-at="2025-10-07T22:14:58 IST" duration-ms="11456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductPriceDisplay -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:14:58 IST" name="tearDown" finished-at="2025-10-07T22:14:58 IST" duration-ms="274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:14:58 IST" name="setUp" finished-at="2025-10-07T22:15:04 IST" duration-ms="5509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testProductSizeSelection()[pri:9, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:15:04 IST" name="testProductSizeSelection" description="Verify product size can be selected" finished-at="2025-10-07T22:15:17 IST" duration-ms="13094" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductSizeSelection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ProductTests@75f5fd58]" started-at="2025-10-07T22:15:17 IST" name="tearDown" finished-at="2025-10-07T22:15:17 IST" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.ProductTests -->
+    </test> <!-- Regression Tests -->
+  </suite> <!-- Polymer Shop Automation Suite -->
 </testng-results>

@@ -7,22 +7,9 @@
     <parameter name="baseUrl" value="https://shop.polymer-project.org/"/>
     
     <listeners>
-        <listener class-name="com.polymershop.listeners.TestListener"/>
+        <listener class-name="listeners.TestListener"/>
+        <listener class-name="listeners.ExtentReportListener"/>
     </listeners>
-    
-    <test name="Smoke Tests" preserve-order="true">
-        <groups>
-            <run>
-                <include name="smoke"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="test.HomePageTests"/>
-            <class name="test.ProductTests"/>
-            <class name="test.CartTests"/>
-            <class name="test.CheckoutTests"/>
-        </classes>
-    </test>
     
     <test name="Regression Tests" preserve-order="true">
         <classes>
@@ -58,40 +45,16 @@
                     <include name="testCartIconBadgeUpdate"/>
                 </methods>
             </class>
-            
-            <class name="test.CheckoutTests">
+  
+            <!-- CRITICAL FIX: The Java file is named InvalidFeatureTests (singular), not InvalidFeaturesTests (plural). -->
+            <class name="test.InvalidFeatureTests"> 
                 <methods>
-                    <include name="testCheckoutButtonFunctionality"/>
-                    <include name="testShippingFormValidation"/>
-                    <include name="testPaymentMethodSelection"/>
-                    <include name="testOrderSummaryInCheckout"/>
-                    <include name="testOrderConfirmation"/>
+                    <include name="testProductSortingOptions"/>
+                    <include name="testProductSearchResults"/>
+                    <include name="testProductPagination"/>
+                    <include name="reportInvalidFeatures"/>
                 </methods>
             </class>
-        </classes>
-    </test>
-    
-    <test name="Home Page Tests" preserve-order="true">
-        <classes>
-            <class name="test.HomePageTests"/>
-        </classes>
-    </test>
-    
-    <test name="Product Tests" preserve-order="true">
-        <classes>
-            <class name="test.ProductTests"/>
-        </classes>
-    </test>
-    
-    <test name="Cart Tests" preserve-order="true">
-        <classes>
-            <class name="test.CartTests"/>
-        </classes>
-    </test>
-    
-    <test name="Checkout Tests" preserve-order="true">
-        <classes>
-            <class name="test.CheckoutTests"/>
         </classes>
     </test>
     

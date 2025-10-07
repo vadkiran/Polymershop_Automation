@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
@@ -98,14 +99,14 @@ public class HomePage extends BasePage {
     public void openCart() {
         waitFor(1000); // Ensure page is ready
         SearchContext shopAppRoot = getShopAppShadowRoot();
-        WebElement header = shopAppRoot.findElement(By.cssSelector("shop-header"));
-        SearchContext headerRoot = header.getShadowRoot();
-        
-        WebElement cartButton = headerRoot.findElement(By.cssSelector("a[href='/cart']"));
+//        WebElement header = shopAppRoot.findElement(By.cssSelector("shop-cart-model"));
+//        SearchContext headerRoot = header.getShadowRoot();
+        WebElement cartButton = shopAppRoot.findElement(By.cssSelector("a[href='/cart']"));
         clickElement(cartButton);
         waitForUrlContains("/cart");
         waitFor(1500);
     }
+
     
     public List<WebElement> getCategoryLinks() {
         waitFor(1000); // Ensure page is ready
@@ -126,21 +127,73 @@ public class HomePage extends BasePage {
         }
     }
     
+//    public String getCartBadgeCount() {
+//    	js.executeScript("window.scrollTo(0, 0);");
+//        try {
+//            waitFor(1000);
+//            SearchContext shopAppRoot = getShopAppShadowRoot();
+//            WebElement header = shopAppRoot.findElement(By.cssSelector("#header"));
+//            SearchContext headerRoot = header.getShadowRoot();
+//            
+//            WebElement badge = headerRoot.findElement(By.cssSelector("[icon=\"shopping-cart\"]"));
+//            SearchContext badgeRoot = badge.getShadowRoot();
+//            
+//            WebElement count = badgeRoot.findElement(By.cssSelector(".cart-badge"));
+//            return getTextSafely(count);
+//        } catch (Exception e) {
+//            return "0";
+//        }
+//    }
+
     public String getCartBadgeCount() {
         try {
             waitFor(1000);
+            js.executeScript("window.scrollTo(0, 0);");
+            waitFor(500);
+            
             SearchContext shopAppRoot = getShopAppShadowRoot();
-            WebElement header = shopAppRoot.findElement(By.cssSelector("shop-header"));
-            SearchContext headerRoot = header.getShadowRoot();
             
-            WebElement badge = headerRoot.findElement(By.cssSelector("shop-cart-button"));
-            SearchContext badgeRoot = badge.getShadowRoot();
+            // Try multiple selector strategies
+            try {
+                // Strategy 1: Direct cart icon with aria-label
+                WebElement cartIcon = shopAppRoot.findElement(By.cssSelector("a[href='/cart']"));
+                String ariaLabel = cartIcon.getAttribute("aria-label");
+                
+                if (ariaLabel != null && ariaLabel.contains("Shopping cart")) {
+                    // Extract number from "Shopping cart: 2 items"
+                    String[] parts = ariaLabel.split(":");
+                    if (parts.length > 1) {
+                        String countText = parts[1].trim().split(" ")[0];
+                        return countText;
+                    }
+                }
+            } catch (Exception e1) {
+                // Strategy 2: Check cart badge element
+                try {
+                    WebElement cartBadge = shopAppRoot.findElement(
+                        By.cssSelector(".cart-badge, [class*='badge']"));
+                    String badgeText = getTextSafely(cartBadge);
+                    if (!badgeText.isEmpty()) {
+                        return badgeText;
+                    }
+                } catch (Exception e2) {
+                    // Strategy 3: JavaScript execution to get cart count
+                    Object cartCount = js.executeScript(
+                        "var shopApp = document.querySelector('shop-app');" +
+                        "if (shopApp && shopApp.cart) {" +
+                        "  return shopApp.cart.length || 0;" +
+                        "}" +
+                        "return 0;"
+                    );
+                    return String.valueOf(cartCount);
+                }
+            }
             
-            WebElement count = badgeRoot.findElement(By.cssSelector(".badge"));
-            return getTextSafely(count);
+            return "0";
+            
         } catch (Exception e) {
+            System.err.println("Failed to retrieve cart badge count: " + e.getMessage());
             return "0";
         }
     }
-
 }

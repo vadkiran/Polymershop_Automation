@@ -32,7 +32,7 @@ public class ProductDetailPage extends BasePage {
     public String getProductTitle() {
         try {
             SearchContext detailRoot = getShopDetailShadowRoot();
-            WebElement title = detailRoot.findElement(By.cssSelector(".title, h1"));
+            WebElement title = detailRoot.findElement(By.cssSelector("h1"));
             return getTextSafely(title);
         } catch (Exception e) {
             return "";
@@ -42,7 +42,7 @@ public class ProductDetailPage extends BasePage {
     public String getProductPrice() {
         try {
             SearchContext detailRoot = getShopDetailShadowRoot();
-            WebElement price = detailRoot.findElement(By.cssSelector(".price"));
+            WebElement price = detailRoot.findElement(By.cssSelector("div.price"));
             return getTextSafely(price);
         } catch (Exception e) {
             return "";
@@ -62,7 +62,7 @@ public class ProductDetailPage extends BasePage {
     public boolean isProductImageDisplayed() {
         try {
             SearchContext detailRoot = getShopDetailShadowRoot();
-            WebElement image = detailRoot.findElement(By.cssSelector("img, .image"));
+            WebElement image = detailRoot.findElement(By.cssSelector("shop-image"));
             return image.isDisplayed();
         } catch (Exception e) {
             return false;

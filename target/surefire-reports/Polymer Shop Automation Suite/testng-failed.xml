@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Polymer Shop Automation Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="baseUrl" value="https://shop.polymer-project.org/"/>
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="listeners.TestListener"/>
+    <listener class-name="listeners.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Regression Tests(failed)" verbose="0">
+    <classes>
+      <class name="test.InvalidFeatureTests">
+        <methods>
+          <include name="testProductSortingOptions"/>
+          <include name="setUp"/>
+          <include name="testProductPagination"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- test.InvalidFeatureTests -->
+    </classes>
+  </test> <!-- Regression Tests(failed) -->
+</suite> <!-- Failed suite [Polymer Shop Automation Suite] -->

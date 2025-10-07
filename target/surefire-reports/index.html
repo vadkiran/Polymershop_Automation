@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Polymer Shop Automation Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Polymer_Shop_Automation_Suite" class="navigator-link ">
+                    <span>C:\Users\kvina\eclipse-workspace\polymershop\src\test\resources\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Polymer_Shop_Automation_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Polymer_Shop_Automation_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Polymer_Shop_Automation_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Polymer_Shop_Automation_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Polymer_Shop_Automation_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Polymer_Shop_Automation_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">21 methods, 2 failed,   19 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" class="hide-methods failed suite-Polymer_Shop_Automation_Suite"> (hide)</a> <!-- hide-methods failed suite-Polymer_Shop_Automation_Suite -->
+                      <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" class="show-methods failed suite-Polymer_Shop_Automation_Suite"> (show)</a> <!-- show-methods failed suite-Polymer_Shop_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Polymer_Shop_Automation_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.InvalidFeatureTests" class="method navigator-link" hash-for-method="testProductPagination">testProductPagination</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.InvalidFeatureTests" class="method navigator-link" hash-for-method="testProductSortingOptions">testProductSortingOptions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Polymer_Shop_Automation_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" class="hide-methods passed suite-Polymer_Shop_Automation_Suite"> (hide)</a> <!-- hide-methods passed suite-Polymer_Shop_Automation_Suite -->
+                      <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" class="show-methods passed suite-Polymer_Shop_Automation_Suite"> (show)</a> <!-- show-methods passed suite-Polymer_Shop_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Polymer_Shop_Automation_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.InvalidFeatureTests" class="method navigator-link" hash-for-method="reportInvalidFeatures">reportInvalidFeatures</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.ProductTests" class="method navigator-link" hash-for-method="testAddToCartFunctionality">testAddToCartFunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.CartTests" class="method navigator-link" hash-for-method="testAddingProductsToCart">testAddingProductsToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.CartTests" class="method navigator-link" hash-for-method="testCartIconBadgeUpdate">testCartIconBadgeUpdate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.CartTests" class="method navigator-link" hash-for-method="testCartTotalCalculation">testCartTotalCalculation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.CartTests" class="method navigator-link" hash-for-method="testEmptyCartMessage">testEmptyCartMessage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.HomePageTests" class="method navigator-link" hash-for-method="testHomepageLoadsCorrectly">testHomepageLoadsCorrectly</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.HomePageTests" class="method navigator-link" hash-for-method="testNavigationMenuItems">testNavigationMenuItems</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.HomePageTests" class="method navigator-link" hash-for-method="testProductCategoriesDisplay">testProductCategoriesDisplay</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.ProductTests" class="method navigator-link" hash-for-method="testProductDescriptionAndSpecs">testProductDescriptionAndSpecs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.ProductTests" class="method navigator-link" hash-for-method="testProductDetailsPageElements">testProductDetailsPageElements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.ProductTests" class="method navigator-link" hash-for-method="testProductFilteringByCategory">testProductFilteringByCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.ProductTests" class="method navigator-link" hash-for-method="testProductGridDisplay">testProductGridDisplay</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.ProductTests" class="method navigator-link" hash-for-method="testProductImageGallery">testProductImageGallery</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.ProductTests" class="method navigator-link" hash-for-method="testProductPriceDisplay">testProductPriceDisplay</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.ProductTests" class="method navigator-link" hash-for-method="testProductSizeSelection">testProductSizeSelection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.ProductTests" class="method navigator-link" hash-for-method="testQuantitySelection">testQuantitySelection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.CartTests" class="method navigator-link" hash-for-method="testRemovingProductsFromCart">testRemovingProductsFromCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Polymer_Shop_Automation_Suite" title="test.CartTests" class="method navigator-link" hash-for-method="testUpdatingProductQuantityInCart">testUpdatingProductQuantityInCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Polymer_Shop_Automation_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Polymer_Shop_Automation_Suite" class="panel Polymer_Shop_Automation_Suite">
+          <div class="suite-Polymer_Shop_Automation_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">test.InvalidFeatureTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductPagination">
+                  </a> <!-- testProductPagination -->
+                  <span class="method-name">testProductPagination</span>
+                  <div class="stack-trace">java.lang.AssertionError: EXPECTED FAILURE: Pagination feature is not implemented on Polymer Shop
+	at test.InvalidFeatureTests.testProductPagination(InvalidFeatureTests.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(INVALID: Pagination does not exist)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductSortingOptions">
+                  </a> <!-- testProductSortingOptions -->
+                  <span class="method-name">testProductSortingOptions</span>
+                  <div class="stack-trace">java.lang.AssertionError: EXPECTED FAILURE: Product sorting feature is not implemented on Polymer Shop
+	at test.InvalidFeatureTests.testProductSortingOptions(InvalidFeatureTests.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(INVALID: Product sorting feature does not exist)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Polymer_Shop_Automation_Suite-class-failed -->
+          <div class="suite-Polymer_Shop_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.HomePageTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHomepageLoadsCorrectly">
+                  </a> <!-- testHomepageLoadsCorrectly -->
+                  <span class="method-name">testHomepageLoadsCorrectly</span>
+                  <em>
+(Verify homepage loads correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNavigationMenuItems">
+                  </a> <!-- testNavigationMenuItems -->
+                  <span class="method-name">testNavigationMenuItems</span>
+                  <em>
+(Verify navigation menu items are displayed)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductCategoriesDisplay">
+                  </a> <!-- testProductCategoriesDisplay -->
+                  <span class="method-name">testProductCategoriesDisplay</span>
+                  <em>
+(Verify product categories are accessible)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Polymer_Shop_Automation_Suite-class-passed -->
+          <div class="suite-Polymer_Shop_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.CartTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddingProductsToCart">
+                  </a> <!-- testAddingProductsToCart -->
+                  <span class="method-name">testAddingProductsToCart</span>
+                  <em>
+(TC-16: Verify products can be added to cart)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCartIconBadgeUpdate">
+                  </a> <!-- testCartIconBadgeUpdate -->
+                  <span class="method-name">testCartIconBadgeUpdate</span>
+                  <em>
+(Verify cart icon badge updates when items are added)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCartTotalCalculation">
+                  </a> <!-- testCartTotalCalculation -->
+                  <span class="method-name">testCartTotalCalculation</span>
+                  <em>
+( Verify cart total is calculated correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmptyCartMessage">
+                  </a> <!-- testEmptyCartMessage -->
+                  <span class="method-name">testEmptyCartMessage</span>
+                  <em>
+(TC-20: Verify empty cart message is displayed)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRemovingProductsFromCart">
+                  </a> <!-- testRemovingProductsFromCart -->
+                  <span class="method-name">testRemovingProductsFromCart</span>
+                  <em>
+(Verify products can be removed from cart)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdatingProductQuantityInCart">
+                  </a> <!-- testUpdatingProductQuantityInCart -->
+                  <span class="method-name">testUpdatingProductQuantityInCart</span>
+                  <em>
+(Verify product quantity can be updated in cart)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Polymer_Shop_Automation_Suite-class-passed -->
+          <div class="suite-Polymer_Shop_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.ProductTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddToCartFunctionality">
+                  </a> <!-- testAddToCartFunctionality -->
+                  <span class="method-name">testAddToCartFunctionality</span>
+                  <em>
+(Verify add to cart button functionality)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductDescriptionAndSpecs">
+                  </a> <!-- testProductDescriptionAndSpecs -->
+                  <span class="method-name">testProductDescriptionAndSpecs</span>
+                  <em>
+(Verify product description and specifications)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductDetailsPageElements">
+                  </a> <!-- testProductDetailsPageElements -->
+                  <span class="method-name">testProductDetailsPageElements</span>
+                  <em>
+(Verify all product detail page elements are displayed)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductFilteringByCategory">
+                  </a> <!-- testProductFilteringByCategory -->
+                  <span class="method-name">testProductFilteringByCategory</span>
+                  <em>
+(Verify products can be filtered by category)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductGridDisplay">
+                  </a> <!-- testProductGridDisplay -->
+                  <span class="method-name">testProductGridDisplay</span>
+                  <em>
+(Verify product grid displays products)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductImageGallery">
+                  </a> <!-- testProductImageGallery -->
+                  <span class="method-name">testProductImageGallery</span>
+                  <em>
+(Verify product image is displayed)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductPriceDisplay">
+                  </a> <!-- testProductPriceDisplay -->
+                  <span class="method-name">testProductPriceDisplay</span>
+                  <em>
+(Verify product price is displayed correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductSizeSelection">
+                  </a> <!-- testProductSizeSelection -->
+                  <span class="method-name">testProductSizeSelection</span>
+                  <em>
+(Verify product size can be selected)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testQuantitySelection">
+                  </a> <!-- testQuantitySelection -->
+                  <span class="method-name">testQuantitySelection</span>
+                  <em>
+(Verify quantity can be selected)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Polymer_Shop_Automation_Suite-class-passed -->
+          <div class="suite-Polymer_Shop_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.InvalidFeatureTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="reportInvalidFeatures">
+                  </a> <!-- reportInvalidFeatures -->
+                  <span class="method-name">reportInvalidFeatures</span>
+                  <em>
+(Report invalid features found)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Polymer_Shop_Automation_Suite-class-passed -->
+        </div> <!-- panel Polymer_Shop_Automation_Suite -->
+        <div panel-name="test-xml-Polymer_Shop_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\kvina\eclipse-workspace\polymershop\src\test\resources\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Polymer Shop Automation Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;parameter name=&quot;baseUrl&quot; value=&quot;https://shop.polymer-project.org/&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listeners.TestListener&quot;/&gt;
+    &lt;listener class-name=&quot;listeners.ExtentReportListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Regression Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;test.HomePageTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testHomepageLoadsCorrectly&quot;/&gt;
+          &lt;include name=&quot;testNavigationMenuItems&quot;/&gt;
+          &lt;include name=&quot;testProductCategoriesDisplay&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- test.HomePageTests --&gt;
+      &lt;class name=&quot;test.ProductTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testProductGridDisplay&quot;/&gt;
+          &lt;include name=&quot;testProductFilteringByCategory&quot;/&gt;
+          &lt;include name=&quot;testProductDetailsPageElements&quot;/&gt;
+          &lt;include name=&quot;testProductImageGallery&quot;/&gt;
+          &lt;include name=&quot;testProductDescriptionAndSpecs&quot;/&gt;
+          &lt;include name=&quot;testQuantitySelection&quot;/&gt;
+          &lt;include name=&quot;testAddToCartFunctionality&quot;/&gt;
+          &lt;include name=&quot;testProductPriceDisplay&quot;/&gt;
+          &lt;include name=&quot;testProductSizeSelection&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- test.ProductTests --&gt;
+      &lt;class name=&quot;test.CartTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testAddingProductsToCart&quot;/&gt;
+          &lt;include name=&quot;testUpdatingProductQuantityInCart&quot;/&gt;
+          &lt;include name=&quot;testRemovingProductsFromCart&quot;/&gt;
+          &lt;include name=&quot;testCartTotalCalculation&quot;/&gt;
+          &lt;include name=&quot;testEmptyCartMessage&quot;/&gt;
+          &lt;include name=&quot;testCartIconBadgeUpdate&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- test.CartTests --&gt;
+      &lt;class name=&quot;test.InvalidFeatureTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testProductSortingOptions&quot;/&gt;
+          &lt;include name=&quot;testProductSearchResults&quot;/&gt;
+          &lt;include name=&quot;testProductPagination&quot;/&gt;
+          &lt;include name=&quot;reportInvalidFeatures&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- test.InvalidFeatureTests --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Regression Tests --&gt;
+&lt;/suite&gt; &lt;!-- Polymer Shop Automation Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Polymer_Shop_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Polymer Shop Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Regression Tests (4 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Polymer_Shop_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Polymer Shop Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Polymer_Shop_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Polymer Shop Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Polymer_Shop_Automation_Suite');
+function tableData_Polymer_Shop_Automation_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(21);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testRemovingProductsFromCart')
+data.setCell(0, 2, 'test.CartTests')
+data.setCell(0, 3, 25397);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testUpdatingProductQuantityInCart')
+data.setCell(1, 2, 'test.CartTests')
+data.setCell(1, 3, 25264);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testAddToCartFunctionality')
+data.setCell(2, 2, 'test.ProductTests')
+data.setCell(2, 3, 23242);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testCartIconBadgeUpdate')
+data.setCell(3, 2, 'test.CartTests')
+data.setCell(3, 3, 23198);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testCartTotalCalculation')
+data.setCell(4, 2, 'test.CartTests')
+data.setCell(4, 3, 22214);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testAddingProductsToCart')
+data.setCell(5, 2, 'test.CartTests')
+data.setCell(5, 3, 22200);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testProductCategoriesDisplay')
+data.setCell(6, 2, 'test.HomePageTests')
+data.setCell(6, 3, 15524);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testProductFilteringByCategory')
+data.setCell(7, 2, 'test.ProductTests')
+data.setCell(7, 3, 15517);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testQuantitySelection')
+data.setCell(8, 2, 'test.ProductTests')
+data.setCell(8, 3, 13062);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testProductSizeSelection')
+data.setCell(9, 2, 'test.ProductTests')
+data.setCell(9, 3, 13000);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testProductDetailsPageElements')
+data.setCell(10, 2, 'test.ProductTests')
+data.setCell(10, 3, 11548);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testProductDescriptionAndSpecs')
+data.setCell(11, 2, 'test.ProductTests')
+data.setCell(11, 3, 11493);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testProductImageGallery')
+data.setCell(12, 2, 'test.ProductTests')
+data.setCell(12, 3, 11442);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testProductPriceDisplay')
+data.setCell(13, 2, 'test.ProductTests')
+data.setCell(13, 3, 11390);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testProductGridDisplay')
+data.setCell(14, 2, 'test.ProductTests')
+data.setCell(14, 3, 10859);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testNavigationMenuItems')
+data.setCell(15, 2, 'test.HomePageTests')
+data.setCell(15, 3, 8774);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testEmptyCartMessage')
+data.setCell(16, 2, 'test.CartTests')
+data.setCell(16, 3, 6265);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testHomepageLoadsCorrectly')
+data.setCell(17, 2, 'test.HomePageTests')
+data.setCell(17, 3, 4634);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testProductSortingOptions')
+data.setCell(18, 2, 'test.InvalidFeatureTests')
+data.setCell(18, 3, 1);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'reportInvalidFeatures')
+data.setCell(19, 2, 'test.InvalidFeatureTests')
+data.setCell(19, 3, 0);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testProductPagination')
+data.setCell(20, 2, 'test.InvalidFeatureTests')
+data.setCell(20, 3, 0);
+window.suiteTableData['Polymer_Shop_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Polymer_Shop_Automation_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <div id="times-div-Polymer_Shop_Automation_Suite">
+              </div> <!-- times-div-Polymer_Shop_Automation_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Polymer_Shop_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Polymer Shop Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Polymer_Shop_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">1 ignored method</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">test.InvalidFeatureTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testProductSearchResults</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Polymer_Shop_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.HomePageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testHomepageLoadsCorrectly</span>
+                <span class="method-start">6491 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">11125 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">11376 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testNavigationMenuItems</span>
+                <span class="method-start">16681 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">25455 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">25868 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testProductCategoriesDisplay</span>
+                <span class="method-start">31135 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">46659 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.ProductTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">46960 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testProductGridDisplay</span>
+                <span class="method-start">52071 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">62930 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">63201 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testProductFilteringByCategory</span>
+                <span class="method-start">68507 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">84024 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">84302 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testProductDetailsPageElements</span>
+                <span class="method-start">89443 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">100991 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">101262 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testProductImageGallery</span>
+                <span class="method-start">106430 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">117872 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">118138 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testProductDescriptionAndSpecs</span>
+                <span class="method-start">123267 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">134760 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">135043 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testQuantitySelection</span>
+                <span class="method-start">140163 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">153225 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">153500 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testAddToCartFunctionality</span>
+                <span class="method-start">158649 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">181891 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">182168 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testProductPriceDisplay</span>
+                <span class="method-start">187301 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">198691 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">198960 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testProductSizeSelection</span>
+                <span class="method-start">204086 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">217086 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.CartTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">217341 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testAddingProductsToCart</span>
+                <span class="method-start">222573 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">244773 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">245054 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUpdatingProductQuantityInCart</span>
+                <span class="method-start">250133 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">275397 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">275667 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRemovingProductsFromCart</span>
+                <span class="method-start">280757 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">306154 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">306391 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCartTotalCalculation</span>
+                <span class="method-start">311381 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">333595 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">333849 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testEmptyCartMessage</span>
+                <span class="method-start">339948 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">346213 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">346530 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCartIconBadgeUpdate</span>
+                <span class="method-start">351678 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">374876 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.InvalidFeatureTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">375157 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testProductSortingOptions</span>
+                <span class="method-start">378313 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">378943 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">379149 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testProductPagination</span>
+                <span class="method-start">382278 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">382927 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">383134 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">386223 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">reportInvalidFeatures</span>
+                <span class="method-start">386223 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

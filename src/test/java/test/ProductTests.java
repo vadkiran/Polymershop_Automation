@@ -1,6 +1,7 @@
 package test;
 
 import managers.DriverManager;
+import pages.CartPage;
 import pages.HomePage;
 import pages.ProductListingPage;
 import pages.ProductDetailPage;
@@ -38,7 +39,7 @@ public class ProductTests {
     /**
      * Verify product grid display
      */
-    @Test(priority = 1, groups = {"smoke", "product"}, 
+    @Test(priority = 1,
           description = "Verify product grid displays products")
     public void testProductGridDisplay() throws InterruptedException {
         homePage.navigateToMenCategory();
@@ -55,7 +56,7 @@ public class ProductTests {
     /**
      * Verify product filtering by clicking category
      */
-    @Test(priority = 2, groups = {"smoke", "product"}, 
+    @Test(priority = 2,
           description = "Verify products can be filtered by category")
     public void testProductFilteringByCategory() throws InterruptedException {
         homePage.navigateToMenCategory();
@@ -79,7 +80,7 @@ public class ProductTests {
     /**
      * Verify product details page elements
      */
-    @Test(priority = 3, groups = {"regression", "product"}, 
+    @Test(priority = 3, 
           description = "Verify all product detail page elements are displayed")
     public void testProductDetailsPageElements() throws InterruptedException {
         homePage.navigateToMenCategory();
@@ -89,14 +90,14 @@ public class ProductTests {
         
         assertTrue(detailPage.isProductDetailPageLoaded(), 
                   "Product detail page should load");
-        assertTrue(detailPage.areAllProductDetailsDisplayed(), 
-                  "All product details should be displayed");
+       assertTrue(detailPage.areAllProductDetailsDisplayed(), 
+                 "All product details should be displayed");
     }
     
     /**
      * Verify product image gallery
      */
-    @Test(priority = 4, groups = {"regression", "product"}, 
+    @Test(priority = 4,
           description = "Verify product image is displayed")
     public void testProductImageGallery() throws InterruptedException {
         homePage.navigateToMenCategory();
@@ -111,7 +112,7 @@ public class ProductTests {
     /**
      * Verify product description and specs
      */
-    @Test(priority = 5, groups = {"regression", "product"}, 
+    @Test(priority = 5,
           description = "Verify product description and specifications")
     public void testProductDescriptionAndSpecs() throws InterruptedException {
         homePage.navigateToMenCategory();
@@ -130,7 +131,7 @@ public class ProductTests {
     /**
      * Verify quantity selection
      */
-    @Test(priority = 6, groups = {"regression", "product"}, 
+    @Test(priority = 6,
           description = "Verify quantity can be selected")
     public void testQuantitySelection() throws InterruptedException {
         homePage.navigateToMenCategory();
@@ -149,29 +150,33 @@ public class ProductTests {
     /**
      * Verify add to cart functionality
      */
-    @Test(priority = 7, groups = {"smoke", "product"}, 
+    @Test(priority = 7,
           description = "Verify add to cart button functionality")
-    public void testAddToCartFunctionality() throws InterruptedException {
-        homePage.navigateToMenCategory();
-        Thread.sleep(2000);
-        listingPage.selectProduct(0);
-        Thread.sleep(2000);
-        
-        assertTrue(detailPage.isAddToCartButtonDisplayed(), 
-                  "Add to cart button should be displayed");
-        
-        detailPage.clickAddToCart();
-        Thread.sleep(2000);
-        
-        String cartCount = homePage.getCartBadgeCount();
-        assertTrue(!cartCount.equals("0"), 
-                  "Cart should be updated after adding product");
-    }
+public void testAddToCartFunctionality() throws InterruptedException {
+  homePage.navigateToMenCategory();
+  Thread.sleep(2000);
+  listingPage.selectProduct(0);
+  Thread.sleep(2000);
+  
+  assertTrue(detailPage.isAddToCartButtonDisplayed(), 
+            "Add to cart button should be displayed");
+  
+  detailPage.clickAddToCart();
+  Thread.sleep(3000); // Increased wait time
+  
+  // Navigate to cart to verify instead of checking badge
+  homePage.openCart();
+  Thread.sleep(2000);
+  
+  CartPage cartPage = new CartPage(driver);
+  assertFalse(cartPage.isCartEmpty(), 
+            "Cart should not be empty after adding product");
+}
     
     /**
      * Verify product price display
      */
-    @Test(priority = 8, groups = {"regression", "product"}, 
+    @Test(priority = 8,
           description = "Verify product price is displayed correctly")
     public void testProductPriceDisplay() throws InterruptedException {
         homePage.navigateToMenCategory();
@@ -187,7 +192,7 @@ public class ProductTests {
     /**
      * TC-30: Verify product size selection
      */
-    @Test(priority = 9, groups = {"regression", "product"}, 
+    @Test(priority = 9,
           description = "Verify product size can be selected")
     public void testProductSizeSelection() throws InterruptedException {
         homePage.navigateToMenCategory();

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The status attribute controls logging internal to Log4j (e.g., startup errors) -->
+<Configuration status="INFO">
+
+    <!-- Define where logs will go -->
+    <Appenders>
+        <!-- Console Appender: For printing logs to the console -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- PatternLayout defines the format of the log message -->
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <!-- Rolling File Appender: Writes to a file and rolls it over based on size or time -->
+        <RollingFile name="RollingFile" 
+                     fileName="output/logs/test_execution.log" 
+                     filePattern="output/logs/$${date:yyyy-MM}/test_execution-%d{yyyy-MM-dd}-%i.log.gz">
+            
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <!-- Roll over at midnight -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <!-- Roll over when file size reaches 10 MB -->
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <!-- Keep a maximum of 20 archived log files -->
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </Appenders>
+
+    <!-- Define the loggers and their levels -->
+    <Loggers>
+        <!-- Root Logger: Default settings for all loggers -->
+        <Root level="INFO"> 
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+        
+        <!-- Optional: Set specific log levels for third-party libraries -->
+        <!-- Suppresses verbose Selenium/WebDriver messages unless they are WARN or above -->
+        <Logger name="org.openqa.selenium" level="WARN" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        
+    </Loggers>
+</Configuration>

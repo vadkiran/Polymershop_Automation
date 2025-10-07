@@ -1,6 +1,6 @@
-package com.polymershop.data;
+package data;
 
-import com.polymershop.utils.ExcelReader;
+import utils.ExcelReader;
 import org.testng.annotations.DataProvider;
 
 public class TestDataProvider {

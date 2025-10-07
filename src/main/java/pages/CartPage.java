@@ -97,8 +97,8 @@ public class CartPage extends BasePage {
                 WebElement item = items.get(itemIndex);
                 SearchContext itemRoot = item.getShadowRoot();
                 
-                WebElement removeBtn = itemRoot.findElement(
-                    By.cssSelector("button[aria-label*='Remove'], .remove-button"));
+              WebElement removeBtn = itemRoot.findElement(
+            		  	By.cssSelector("button[name='delete'], .delete-button, .remove"));
                 
                 clickElement(removeBtn);
                 waitFor(1000);
@@ -107,6 +107,7 @@ public class CartPage extends BasePage {
             throw new RuntimeException("Failed to remove item: " + e.getMessage());
         }
     }
+
     
     // THIS METHOD WAS MISSING - CAUSING THE ERROR
     public void clickCheckout() {

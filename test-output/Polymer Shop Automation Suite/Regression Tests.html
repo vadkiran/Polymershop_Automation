@@ -1,0 +1,264 @@
+<html>
+<head>
+<title>TestNG:  Regression Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Oct 07 22:11:23 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>407 seconds (407865 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.InvalidFeatureTests.testProductSortingOptions()'><b>testProductSortingOptions</b><br>Test class: test.InvalidFeatureTests<br>Test method: INVALID: Product sorting feature does not exist</td>
+<td><div><pre>java.lang.AssertionError: EXPECTED FAILURE: Product sorting feature is not implemented on Polymer Shop
+	at test.InvalidFeatureTests.testProductSortingOptions(InvalidFeatureTests.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace432142068", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace432142068'><pre>java.lang.AssertionError: EXPECTED FAILURE: Product sorting feature is not implemented on Polymer Shop
+	at org.testng.Assert.fail(Assert.java:111)
+	at test.InvalidFeatureTests.testProductSortingOptions(InvalidFeatureTests.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>test.InvalidFeatureTests@306851c7</td></tr>
+<tr>
+<td title='test.InvalidFeatureTests.testProductPagination()'><b>testProductPagination</b><br>Test class: test.InvalidFeatureTests<br>Test method: INVALID: Pagination does not exist</td>
+<td><div><pre>java.lang.AssertionError: EXPECTED FAILURE: Pagination feature is not implemented on Polymer Shop
+	at test.InvalidFeatureTests.testProductPagination(InvalidFeatureTests.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace888540137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace888540137'><pre>java.lang.AssertionError: EXPECTED FAILURE: Pagination feature is not implemented on Polymer Shop
+	at org.testng.Assert.fail(Assert.java:111)
+	at test.InvalidFeatureTests.testProductPagination(InvalidFeatureTests.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>test.InvalidFeatureTests@306851c7</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.ProductTests.testProductDescriptionAndSpecs()'><b>testProductDescriptionAndSpecs</b><br>Test class: test.ProductTests<br>Test method: Verify product description and specifications</td>
+<td></td>
+<td>11</td>
+<td>test.ProductTests@75f5fd58</td></tr>
+<tr>
+<td title='test.ProductTests.testProductFilteringByCategory()'><b>testProductFilteringByCategory</b><br>Test class: test.ProductTests<br>Test method: Verify products can be filtered by category</td>
+<td></td>
+<td>15</td>
+<td>test.ProductTests@75f5fd58</td></tr>
+<tr>
+<td title='test.ProductTests.testProductImageGallery()'><b>testProductImageGallery</b><br>Test class: test.ProductTests<br>Test method: Verify product image is displayed</td>
+<td></td>
+<td>11</td>
+<td>test.ProductTests@75f5fd58</td></tr>
+<tr>
+<td title='test.ProductTests.testProductPriceDisplay()'><b>testProductPriceDisplay</b><br>Test class: test.ProductTests<br>Test method: Verify product price is displayed correctly</td>
+<td></td>
+<td>11</td>
+<td>test.ProductTests@75f5fd58</td></tr>
+<tr>
+<td title='test.ProductTests.testProductSizeSelection()'><b>testProductSizeSelection</b><br>Test class: test.ProductTests<br>Test method: Verify product size can be selected</td>
+<td></td>
+<td>13</td>
+<td>test.ProductTests@75f5fd58</td></tr>
+<tr>
+<td title='test.CartTests.testCartTotalCalculation()'><b>testCartTotalCalculation</b><br>Test class: test.CartTests<br>Test method:  Verify cart total is calculated correctly</td>
+<td></td>
+<td>22</td>
+<td>test.CartTests@37b70343</td></tr>
+<tr>
+<td title='test.HomePageTests.testNavigationMenuItems()'><b>testNavigationMenuItems</b><br>Test class: test.HomePageTests<br>Test method: Verify navigation menu items are displayed</td>
+<td></td>
+<td>9</td>
+<td>test.HomePageTests@1f2f9244</td></tr>
+<tr>
+<td title='test.ProductTests.testProductDetailsPageElements()'><b>testProductDetailsPageElements</b><br>Test class: test.ProductTests<br>Test method: Verify all product detail page elements are displayed</td>
+<td></td>
+<td>11</td>
+<td>test.ProductTests@75f5fd58</td></tr>
+<tr>
+<td title='test.ProductTests.testProductGridDisplay()'><b>testProductGridDisplay</b><br>Test class: test.ProductTests<br>Test method: Verify product grid displays products</td>
+<td></td>
+<td>11</td>
+<td>test.ProductTests@75f5fd58</td></tr>
+<tr>
+<td title='test.ProductTests.testQuantitySelection()'><b>testQuantitySelection</b><br>Test class: test.ProductTests<br>Test method: Verify quantity can be selected</td>
+<td></td>
+<td>13</td>
+<td>test.ProductTests@75f5fd58</td></tr>
+<tr>
+<td title='test.HomePageTests.testHomepageLoadsCorrectly()'><b>testHomepageLoadsCorrectly</b><br>Test class: test.HomePageTests<br>Test method: Verify homepage loads correctly</td>
+<td></td>
+<td>4</td>
+<td>test.HomePageTests@1f2f9244</td></tr>
+<tr>
+<td title='test.CartTests.testEmptyCartMessage()'><b>testEmptyCartMessage</b><br>Test class: test.CartTests<br>Test method: TC-20: Verify empty cart message is displayed</td>
+<td></td>
+<td>6</td>
+<td>test.CartTests@37b70343</td></tr>
+<tr>
+<td title='test.HomePageTests.testProductCategoriesDisplay()'><b>testProductCategoriesDisplay</b><br>Test class: test.HomePageTests<br>Test method: Verify product categories are accessible</td>
+<td></td>
+<td>16</td>
+<td>test.HomePageTests@1f2f9244</td></tr>
+<tr>
+<td title='test.ProductTests.testAddToCartFunctionality()'><b>testAddToCartFunctionality</b><br>Test class: test.ProductTests<br>Test method: Verify add to cart button functionality</td>
+<td></td>
+<td>23</td>
+<td>test.ProductTests@75f5fd58</td></tr>
+<tr>
+<td title='test.CartTests.testRemovingProductsFromCart()'><b>testRemovingProductsFromCart</b><br>Test class: test.CartTests<br>Test method: Verify products can be removed from cart</td>
+<td></td>
+<td>25</td>
+<td>test.CartTests@37b70343</td></tr>
+<tr>
+<td title='test.CartTests.testAddingProductsToCart()'><b>testAddingProductsToCart</b><br>Test class: test.CartTests<br>Test method: TC-16: Verify products can be added to cart</td>
+<td></td>
+<td>22</td>
+<td>test.CartTests@37b70343</td></tr>
+<tr>
+<td title='test.CartTests.testUpdatingProductQuantityInCart()'><b>testUpdatingProductQuantityInCart</b><br>Test class: test.CartTests<br>Test method: Verify product quantity can be updated in cart</td>
+<td></td>
+<td>25</td>
+<td>test.CartTests@37b70343</td></tr>
+<tr>
+<td title='test.InvalidFeatureTests.reportInvalidFeatures()'><b>reportInvalidFeatures</b><br>Test class: test.InvalidFeatureTests<br>Test method: Report invalid features found</td>
+<td></td>
+<td>0</td>
+<td>test.InvalidFeatureTests@306851c7</td></tr>
+<tr>
+<td title='test.CartTests.testCartIconBadgeUpdate()'><b>testCartIconBadgeUpdate</b><br>Test class: test.CartTests<br>Test method: Verify cart icon badge updates when items are added</td>
+<td></td>
+<td>23</td>
+<td>test.CartTests@37b70343</td></tr>
+</table><p>
+</body>
+</html>
